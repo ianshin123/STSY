@@ -18,7 +18,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 LINK = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
 WIKILINK = re.compile(r"(?<!\[)\[\[([^\]]+)\]\]")
-EXTERNAL = ("http://", "https://", "#", "mailto:")
+# obsidian:// 은 다른 보관함으로 뛰는 링크다 (브리지.md 참조). 파일로 검사하지 않는다.
+EXTERNAL = ("http://", "https://", "#", "mailto:", "obsidian://")
 
 
 SKIP_DIRS = {".git", ".pytest_cache", "__pycache__", ".venv", "venv"}
