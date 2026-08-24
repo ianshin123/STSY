@@ -1,0 +1,2 @@
+# 원시 파형만 LFS. 문헌 PDF는 일반 커밋이다.
+실험/**/raw/** filter=lfs diff=lfs merge=lfs -text
