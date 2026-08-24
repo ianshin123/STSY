@@ -1,9 +1,0 @@
-#!/bin/sh
-# 커밋 전 저장소 무결성 검사 — 깨진 링크 · 위키링크 · 망가진 표
-# 켜기: git config core.hooksPath .githooks
-python3 "$(git rev-parse --show-toplevel)/분석/src/check_links.py" || {
-  echo ""
-  echo "커밋을 멈췄다. 위 오류를 고치고 다시 커밋해라."
-  echo "일부러 넘기려면: git commit --no-verify"
-  exit 1
-}

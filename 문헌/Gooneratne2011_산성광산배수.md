@@ -121,5 +121,5 @@ earthworm (*Aporrectodea caliginosa*) and aquatic oligochaete (*Lumbriculus vari
 
 링크: [`Mazzia2018_NCV바이오마커.md`](Mazzia2018_NCV바이오마커.md) ·
 [`../정리/중금속_신경독성.md`](../정리/중금속_신경독성.md) ·
-[`../정리/지렁이_전극연구.md`](../정리/지렁이_전극연구.md) ·
+[`../문헌/색인.md`](../문헌/색인.md) ·
 [`../연구설계.md`](../연구설계.md)

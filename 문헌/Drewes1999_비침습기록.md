@@ -105,5 +105,5 @@ URL: https://www.ableweb.org/biologylabs/wp-content/uploads/volumes/vol-20/2-dre
 ---
 
 링크: [`../정리/세포외기록_원리.md`](../정리/세포외기록_원리.md) ·
-[`../정리/지렁이_전극연구.md`](../정리/지렁이_전극연구.md) ·
+[`../문헌/색인.md`](../문헌/색인.md) ·
 [`../장치/증폭기/회로설계.md`](../장치/증폭기/회로설계.md)

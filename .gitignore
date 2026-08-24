@@ -11,6 +11,6 @@ Thumbs.db
 *.gcode
 *.3mf
 
-# 임시 · 파생 데이터. 파생은 코드로 재생성한다 (CLAUDE.md 기록 작성 규칙)
+# 임시 · 파생 데이터. 원시 파형만 남긴다 (CLAUDE.md 기록 작성 규칙)
 *.tmp
 /scratch/
