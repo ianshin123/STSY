@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" font-family="Noto Serif CJK KR, serif">
+<rect width="960" height="360" fill="#ffffff"/>
+
+<!-- 차폐 상자 -->
+<rect x="24" y="60" width="250" height="170" rx="4" fill="none" stroke="#666" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="34" y="80" font-size="11.5" fill="#333">차폐 상자 (알루미늄 호일)</text>
+
+<!-- 개체와 전극 -->
+<rect x="52" y="168" width="194" height="12" fill="#e8e8e8" stroke="#888" stroke-width="1"/>
+<text x="149" y="200" font-size="11" text-anchor="middle" fill="#333">받침</text>
+<ellipse cx="149" cy="152" rx="90" ry="12" fill="#f0f0f0" stroke="#555" stroke-width="1.2"/>
+<text x="149" y="126" font-size="11.5" text-anchor="middle" fill="#333">지렁이 (마취)</text>
+<g stroke="#333" stroke-width="1.6">
+<line x1="100" y1="134" x2="100" y2="176"/><line x1="149" y1="134" x2="149" y2="176"/><line x1="198" y1="134" x2="198" y2="176"/>
+</g>
+<text x="149" y="220" font-size="11" text-anchor="middle" fill="#333">기록 전극 2 · 접지 1</text>
+
+<!-- 화살표1 -->
+<line x1="276" y1="152" x2="322" y2="152" stroke="#333" stroke-width="1.4"/>
+<polygon points="322,152 313,148 313,156" fill="#333"/>
+<text x="299" y="104" font-size="11" text-anchor="middle" fill="#333">20–100 µV</text>
+<line x1="299" y1="110" x2="299" y2="145" stroke="#333" stroke-width="0.8"/>
+
+<!-- 1단 -->
+<rect x="326" y="118" width="140" height="68" rx="3" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="396" y="145" font-size="13" font-weight="700" text-anchor="middle" fill="#111">AD623</text>
+<text x="396" y="165" font-size="11.5" text-anchor="middle" fill="#333">계측증폭기 1단</text>
+
+<line x1="468" y1="152" x2="506" y2="152" stroke="#333" stroke-width="1.4"/>
+<polygon points="506,152 497,148 497,156" fill="#333"/>
+
+<!-- 2단 -->
+<rect x="510" y="118" width="160" height="68" rx="3" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="590" y="145" font-size="13" font-weight="700" text-anchor="middle" fill="#111">TL072</text>
+<text x="590" y="165" font-size="11.5" text-anchor="middle" fill="#333">증폭 2단 · 대역통과</text>
+
+<line x1="672" y1="152" x2="710" y2="152" stroke="#333" stroke-width="1.4"/>
+<polygon points="710,152 701,148 701,156" fill="#333"/>
+
+<!-- 스코프 -->
+<rect x="714" y="112" width="220" height="80" rx="3" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="824" y="138" font-size="12.5" font-weight="700" text-anchor="middle" fill="#111">OWON HDS1021M-N</text>
+<text x="824" y="158" font-size="11.5" text-anchor="middle" fill="#333">최소 감도 5 mV/div · 8 bit</text>
+<text x="824" y="178" font-size="11.5" text-anchor="middle" fill="#333">AC 결합 · 프로브 1X</text>
+
+<!-- 전원 -->
+<rect x="326" y="238" width="344" height="52" rx="3" fill="none" stroke="#333" stroke-width="1.3"/>
+<text x="498" y="260" font-size="12" font-weight="700" text-anchor="middle" fill="#111">전원 — 9 V 건전지 1개를 분압</text>
+<text x="498" y="279" font-size="11" text-anchor="middle" fill="#333">2개를 직렬로 쓰면 AD623 절대최대 12 V를 넘는다</text>
+
+<line x1="396" y1="188" x2="396" y2="236" stroke="#333" stroke-width="1"/>
+<line x1="590" y1="188" x2="590" y2="236" stroke="#333" stroke-width="1"/>
+
+<text x="24" y="316" font-size="11" fill="#333">· 목표 통과대역 0.1–3 kHz (Bähring &amp; Bauer 2014). 1단 이득이 커지면 대역폭이 좁아지므로 이득을 두 단으로 나눈다.</text>
+<text x="24" y="336" font-size="11" fill="#333">· 부품값(이득 · 차단주파수)은 확정하지 않았다. 위 제약 안에서 실험 당일 보유 부품에 맞추어 정한다.</text>
+</svg>

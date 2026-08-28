@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+.DS_Store
+Thumbs.db
+
+# 슬라이서 출력. STL 원본(cad/)은 커밋한다.
+*.gcode
+*.3mf
+
+# 임시 · 파생 데이터. 원시 파형만 남긴다 (CLAUDE.md 기록 작성 규칙)
+*.tmp
+/scratch/

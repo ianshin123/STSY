@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" font-family="Noto Serif CJK KR, serif">
+<rect width="1120" height="800" fill="#fff"/>
+<defs><g id="gnd"><line x1="0" y1="0" x2="0" y2="10" stroke="#000" stroke-width="1.4"/><line x1="-13" y1="10" x2="13" y2="10" stroke="#000" stroke-width="1.4"/><line x1="-8" y1="15" x2="8" y2="15" stroke="#000" stroke-width="1.4"/><line x1="-3" y1="20" x2="3" y2="20" stroke="#000" stroke-width="1.4"/></g></defs>
+<g stroke="#000" stroke-width="1.4" fill="none" stroke-linecap="round">
+
+<!-- ================= ① 전원부 ================= -->
+<text x="40" y="34" font-size="13.5" font-weight="700" fill="#000" stroke="none">① 전원부 — 9 V 건전지 1개를 ±4.5 V로 나눈다</text>
+
+<rect x="52" y="66" width="56" height="96"/>
+<text x="80" y="104" font-size="11" text-anchor="middle" fill="#000" stroke="none">9 V</text>
+<text x="80" y="122" font-size="11" text-anchor="middle" fill="#000" stroke="none">건전지</text>
+<text x="64" y="84" font-size="13" fill="#000" stroke="none">+</text>
+<text x="64" y="156" font-size="13" fill="#000" stroke="none">−</text>
+
+<line x1="108" y1="80" x2="1030" y2="80"/>
+<line x1="108" y1="148" x2="150" y2="148"/><line x1="150" y1="148" x2="150" y2="280"/><line x1="150" y1="280" x2="1030" y2="280"/>
+<line x1="360" y1="180" x2="1030" y2="180"/>
+
+<text x="1038" y="84" font-size="12" font-weight="700" fill="#000" stroke="none">V+</text>
+<text x="1038" y="184" font-size="12" font-weight="700" fill="#000" stroke="none">GND</text>
+<text x="1038" y="284" font-size="12" font-weight="700" fill="#000" stroke="none">V−</text>
+<text x="700" y="72" font-size="10.5" fill="#000" stroke="none">가상접지 기준 +4.5 V</text>
+<text x="200" y="304" font-size="10.5" fill="#000" stroke="none">가상접지 기준 −4.5 V</text>
+
+<line x1="215" y1="80" x2="215" y2="112"/><rect x="205" y="112" width="20" height="38"/><line x1="215" y1="150" x2="215" y2="180"/>
+<text x="196" y="136" font-size="11" text-anchor="end" fill="#000" stroke="none">R1</text>
+<line x1="215" y1="180" x2="215" y2="212"/><rect x="205" y="212" width="20" height="38"/><line x1="215" y1="250" x2="215" y2="280"/>
+<text x="196" y="236" font-size="11" text-anchor="end" fill="#000" stroke="none">R2</text>
+<circle cx="215" cy="180" r="3.5" fill="#000"/>
+
+<line x1="215" y1="180" x2="248" y2="180"/><line x1="248" y1="180" x2="248" y2="162"/><line x1="248" y1="162" x2="272" y2="162"/>
+<polygon points="272,136 272,224 332,180"/>
+<text x="288" y="184" font-size="10" fill="#000" stroke="none">TL072 B</text>
+<text x="262" y="158" font-size="10" fill="#000" stroke="none">5</text>
+<text x="262" y="204" font-size="10" fill="#000" stroke="none">6</text>
+<text x="336" y="172" font-size="10" fill="#000" stroke="none">7</text>
+<line x1="332" y1="180" x2="360" y2="180"/>
+<circle cx="352" cy="180" r="3.5" fill="#000"/>
+<line x1="352" y1="180" x2="352" y2="240"/><line x1="352" y1="240" x2="248" y2="240"/><line x1="248" y1="240" x2="248" y2="198"/><line x1="248" y1="198" x2="272" y2="198"/>
+
+<line x1="470" y1="80" x2="470" y2="118"/><line x1="456" y1="118" x2="484" y2="118"/><line x1="456" y1="126" x2="484" y2="126"/><line x1="470" y1="126" x2="470" y2="180"/>
+<text x="490" y="126" font-size="10.5" fill="#000" stroke="none">Cd</text>
+<line x1="540" y1="180" x2="540" y2="218"/><line x1="526" y1="218" x2="554" y2="218"/><line x1="526" y1="226" x2="554" y2="226"/><line x1="540" y1="226" x2="540" y2="280"/>
+<text x="560" y="226" font-size="10.5" fill="#000" stroke="none">Cd</text>
+<text x="620" y="128" font-size="10.5" fill="#000" stroke="none">Cd = 디커플링. 각 IC의 전원 핀 가까이에 둔다.</text>
+
+<!-- ================= ② 1단 ================= -->
+<text x="40" y="372" font-size="13.5" font-weight="700" fill="#000" stroke="none">② 1단 계측증폭기 AD623</text>
+<text x="40" y="390" font-size="10.5" fill="#000" stroke="none">두 전극의 미세한 전위차를 키운다</text>
+
+<circle cx="60" cy="430" r="4"/><line x1="64" y1="430" x2="196" y2="430"/>
+<text x="52" y="424" font-size="11" text-anchor="end" fill="#000" stroke="none">전극 A</text>
+<circle cx="60" cy="474" r="4"/><line x1="64" y1="474" x2="196" y2="474"/>
+<text x="52" y="480" font-size="11" text-anchor="end" fill="#000" stroke="none">전극 B</text>
+<circle cx="60" cy="620" r="4"/><line x1="64" y1="620" x2="150" y2="620"/>
+<text x="52" y="626" font-size="11" text-anchor="end" fill="#000" stroke="none">접지 전극</text>
+<use href="#gnd" x="150" y="620"/>
+
+<circle cx="100" cy="430" r="3.5" fill="#000"/><line x1="100" y1="430" x2="100" y2="468"/><path d="M 100 468 A 6 6 0 0 1 100 480"/><line x1="100" y1="480" x2="100" y2="512"/><rect x="90" y="512" width="20" height="38"/><line x1="100" y1="550" x2="100" y2="576"/>
+<text x="84" y="536" font-size="10.5" text-anchor="end" fill="#000" stroke="none">Rb1</text>
+<use href="#gnd" x="100" y="576"/>
+<circle cx="150" cy="474" r="3.5" fill="#000"/><line x1="150" y1="474" x2="150" y2="512"/><rect x="140" y="512" width="20" height="38"/><line x1="150" y1="550" x2="150" y2="576"/>
+<text x="176" y="536" font-size="10.5" fill="#000" stroke="none">Rb2</text>
+<use href="#gnd" x="150" y="576"/>
+
+<rect x="196" y="398" width="140" height="108"/>
+<text x="266" y="434" font-size="13" font-weight="700" text-anchor="middle" fill="#000" stroke="none">AD623</text>
+<text x="266" y="460" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">모듈 (DIP 칩 아님)</text>
+<text x="188" y="426" font-size="10" text-anchor="end" fill="#000" stroke="none">IN+</text>
+<text x="188" y="470" font-size="10" text-anchor="end" fill="#000" stroke="none">IN−</text>
+
+<line x1="230" y1="398" x2="230" y2="332"/><text x="236" y="340" font-size="10.5" fill="#000" stroke="none">+VS → V+</text>
+<line x1="300" y1="506" x2="300" y2="660"/><text x="306" y="672" font-size="10.5" fill="#000" stroke="none">−VS → V−</text>
+<line x1="336" y1="486" x2="368" y2="486"/><circle cx="368" cy="486" r="3.5" fill="#000"/><text x="376" y="490" font-size="10.5" fill="#000" stroke="none">REF → GND</text>
+
+<line x1="212" y1="506" x2="212" y2="560"/><line x1="212" y1="560" x2="238" y2="560"/>
+<rect x="238" y="550" width="56" height="20"/><line x1="266" y1="596" x2="266" y2="574"/><path d="M 260 580 L 266 570 L 272 580 Z" fill="#000"/><text x="266" y="614" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">이득 트리머</text>
+<line x1="294" y1="560" x2="320" y2="560"/><line x1="320" y1="560" x2="320" y2="506"/>
+<text x="330" y="590" font-size="10.5" fill="#000" stroke="none">이득 트리머가 모듈에 달려 있다.</text><text x="330" y="606" font-size="10.5" fill="#000" stroke="none">RG 저항을 따로 꽂지 않는다.</text>
+
+<!-- 1단 → 2단 -->
+<line x1="336" y1="430" x2="400" y2="430"/>
+<line x1="400" y1="418" x2="400" y2="442"/><line x1="410" y1="418" x2="410" y2="442"/>
+<text x="405" y="410" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">C1</text>
+<line x1="410" y1="430" x2="452" y2="430"/>
+<rect x="452" y="420" width="48" height="20"/><text x="476" y="412" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">Rin</text>
+<line x1="500" y1="430" x2="568" y2="430"/>
+
+<!-- ================= ③ 2단 ================= -->
+<text x="850" y="368" font-size="13.5" font-weight="700" fill="#000" stroke="none">③ 2단 TL072 A</text>
+<text x="850" y="386" font-size="10.5" fill="#000" stroke="none">더 키우고 통과대역을 자른다</text>
+
+<circle cx="568" cy="430" r="3.5" fill="#000"/>
+<polygon points="600,396 600,494 664,445"/>
+<text x="616" y="450" font-size="10" fill="#000" stroke="none">TL072 A</text>
+<line x1="568" y1="430" x2="600" y2="430"/>
+<text x="592" y="424" font-size="10" text-anchor="end" fill="#000" stroke="none">2</text>
+<line x1="568" y1="460" x2="600" y2="460"/><text x="592" y="474" font-size="10" text-anchor="end" fill="#000" stroke="none">3</text>
+<line x1="568" y1="460" x2="568" y2="500"/><use href="#gnd" x="568" y="500"/>
+
+<line x1="664" y1="445" x2="756" y2="445"/><circle cx="756" cy="445" r="3.5" fill="#000"/>
+<text x="668" y="438" font-size="10" fill="#000" stroke="none">1</text>
+<line x1="648" y1="396" x2="648" y2="372"/><text x="654" y="376" font-size="10.5" fill="#000" stroke="none">8 → V+</text>
+<line x1="628" y1="494" x2="628" y2="660"/><text x="634" y="672" font-size="10.5" fill="#000" stroke="none">4 → V−</text>
+
+<!-- 되먹임: Rf 와 Cf 병렬 -->
+<line x1="568" y1="430" x2="568" y2="300"/><line x1="568" y1="300" x2="640" y2="300"/>
+<rect x="640" y="290" width="52" height="20"/><text x="666" y="304" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">Rf</text>
+<line x1="692" y1="300" x2="756" y2="300"/><line x1="756" y1="300" x2="756" y2="445"/>
+<line x1="568" y1="340" x2="652" y2="340"/><line x1="652" y1="328" x2="652" y2="352"/><line x1="662" y1="328" x2="662" y2="352"/><line x1="662" y1="340" x2="756" y2="340"/>
+<text x="700" y="330" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">Cf</text>
+
+<!-- 스코프 -->
+<line x1="756" y1="445" x2="768" y2="445"/>
+<rect x="768" y="404" width="176" height="82"/>
+<text x="856" y="432" font-size="12" font-weight="700" text-anchor="middle" fill="#000" stroke="none">오실로스코프</text>
+<text x="856" y="454" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">프로브 1X · AC 결합</text>
+<text x="856" y="472" font-size="10.5" text-anchor="middle" fill="#000" stroke="none">반드시 배터리 구동</text>
+<line x1="800" y1="486" x2="800" y2="516"/><use href="#gnd" x="800" y="516"/>
+<text x="818" y="524" font-size="10.5" fill="#000" stroke="none">접지 클립 → GND 레일</text>
+
+<!-- ================= 주석 ================= -->
+<rect x="40" y="700" width="480" height="76" stroke-dasharray="6 4"/>
+<text x="56" y="722" font-size="10.5" fill="#000" stroke="none">패러데이 케이지 (알루미늄 호일) — 악어클립으로 GND 레일에 연결한다.</text>
+<text x="56" y="742" font-size="10.5" fill="#000" stroke="none">지렁이 · 전극 · 1단을 이 안에 둔다.</text>
+<text x="56" y="762" font-size="10.5" fill="#000" stroke="none">회로와 오실로스코프를 모두 배터리로 구동한다.</text>
+
+<text x="560" y="716" font-size="10.5" fill="#000" stroke="none">Rb1 · Rb2 는 입력 바이어스 전류가 흐를 직류 경로다.</text>
+<text x="560" y="736" font-size="10.5" fill="#000" stroke="none">AD623 데이터시트 p.27 — 부동 입력원을 증폭할 때는</text>
+<text x="560" y="756" font-size="10.5" fill="#000" stroke="none">각 입력에 직류 경로가 반드시 있어야 한다.</text>
+<text x="560" y="776" font-size="10.5" fill="#000" stroke="none">모든 GND 기호는 같은 GND 레일이다.</text>
+</g>
+</svg>

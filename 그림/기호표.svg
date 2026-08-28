@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2420" height="1570" viewBox="0 0 2420 1570" font-family="Noto Sans CJK KR, sans-serif"><rect width="2420" height="1570" fill="#fff"/>
+<text x="50" y="66" font-size="36" font-weight="700" fill="#111" text-anchor="start">전체 연결도 기호표 — 그림의 무엇이 실물의 무엇인가</text>
+<text x="50" y="104" font-size="19" font-weight="400" fill="#555" text-anchor="start">2026년 8월 28일 · 「그림/전체연결도.png」 와 같이 본다.</text>
+<rect x="50" y="170" width="1130" height="360" rx="14" fill="#fbfbf9" stroke="#c9c9c2" stroke-width="2"/>
+<text x="66" y="156" font-size="25" font-weight="700" fill="#111" text-anchor="start">A.  선 색 = 실물의 종류 (역할이 아니다)</text>
+<text x="70" y="204" font-size="17" font-weight="700" fill="#c0392b" text-anchor="start">색은 「무엇으로 만든 연결인가」를 나타낸다. 역할(V+ · V− · GND · 신호)은 색이 아니라 이름표와 결선표에 적었다.</text>
+<line x1="80" y1="246" x2="180" y2="246" stroke="#1a5fb4" stroke-width="9" stroke-linecap="round"/>
+<text x="202" y="253" font-size="19" font-weight="700" fill="#111" text-anchor="start">수–수 점퍼선</text>
+<text x="470" y="253" font-size="17" font-weight="400" fill="#333" text-anchor="start">보드 구멍 ↔ 보드 구멍. 회로 안쪽 배선 전부 · 19개</text>
+<line x1="80" y1="294" x2="180" y2="294" stroke="#0f9b8e" stroke-width="9" stroke-linecap="round"/>
+<text x="202" y="301" font-size="19" font-weight="700" fill="#111" text-anchor="start">악어클립 테스트 리드선</text>
+<text x="470" y="301" font-size="17" font-weight="400" fill="#333" text-anchor="start">양끝이 악어입. 전극 3개 + 케이지 1개</text>
+<line x1="80" y1="342" x2="180" y2="342" stroke="#8e44ad" stroke-width="9" stroke-linecap="round"/>
+<text x="202" y="349" font-size="19" font-weight="700" fill="#111" text-anchor="start">건전지 스냅 연선</text>
+<text x="470" y="349" font-size="17" font-weight="400" fill="#333" text-anchor="start">실물의 두 선은 빨강·검정이다. 빨강 → V+, 검정 → V−</text>
+<line x1="80" y1="390" x2="180" y2="390" stroke="#2f2f2f" stroke-width="9" stroke-linecap="round"/>
+<text x="202" y="397" font-size="19" font-weight="700" fill="#111" text-anchor="start">오실로스코프 프로브</text>
+<text x="470" y="397" font-size="17" font-weight="400" fill="#333" text-anchor="start">동축 케이블과 접지선. 프로브에 붙어 있다</text>
+<line x1="80" y1="438" x2="180" y2="438" stroke="#9a9a9a" stroke-width="9" stroke-linecap="round"/>
+<text x="202" y="445" font-size="19" font-weight="700" fill="#111" text-anchor="start">회색 = 부품 다리 · 시침핀</text>
+<text x="470" y="445" font-size="17" font-weight="400" fill="#333" text-anchor="start">저항 · 커패시터의 다리, 그리고 강선</text>
+<line x1="80" y1="488" x2="180" y2="488" stroke="#e2a8a8" stroke-width="4"/>
+<line x1="80" y1="500" x2="180" y2="500" stroke="#aab8dd" stroke-width="4"/>
+<text x="202" y="500" font-size="19" font-weight="700" fill="#111" text-anchor="start">연한 빨강·파랑 줄</text>
+<text x="470" y="500" font-size="17" font-weight="400" fill="#333" text-anchor="start">보드에 인쇄된 레일 표시. 전선이 아니다</text>
+<rect x="1230" y="170" width="1140" height="1010" rx="14" fill="#fbfbf9" stroke="#c9c9c2" stroke-width="2"/>
+<text x="1246" y="156" font-size="25" font-weight="700" fill="#111" text-anchor="start">B.  무엇으로 잇나  —  실물과 짝짓기</text>
+<text x="1310" y="204" font-size="16" font-weight="700" fill="#999" text-anchor="start">그림</text>
+<text x="1470" y="204" font-size="16" font-weight="700" fill="#999" text-anchor="start">쓰는 곳</text>
+<text x="1470" y="222" font-size="16" font-weight="700" fill="#999" text-anchor="start">우리 목록의 무엇인가</text>
+<rect x="1248" y="232" width="1104" height="88" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<g transform="translate(1288,276) rotate(90)"><rect x="-10" y="-19" width="20" height="30" rx="3" fill="#262626"/><line x1="0" y1="11" x2="0" y2="37" stroke="#c9c9c9" stroke-width="5"/></g>
+<line x1="1300" y1="276.0" x2="1400" y2="276.0" stroke="#1a5fb4" stroke-width="8" stroke-linecap="round"/>
+<g transform="translate(1412,276) rotate(-90)"><rect x="-10" y="-19" width="20" height="30" rx="3" fill="#262626"/><line x1="0" y1="11" x2="0" y2="37" stroke="#c9c9c9" stroke-width="5"/></g>
+<text x="1470" y="270" font-size="18" font-weight="700" fill="#111" text-anchor="start">수–수 점퍼선 — 보드 구멍 ↔ 보드 구멍</text>
+<text x="1470" y="296" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">안쪽 17개 + 전극 끌어오기 2개 = 19개 (20개 보유)</text>
+<rect x="1248" y="330" width="1104" height="88" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<g transform="translate(1288,374) rotate(90)"><rect x="-10" y="-19" width="20" height="38" rx="3" fill="#262626"/><rect x="-4.5" y="-15" width="9" height="10" rx="1.5" fill="#8f8f8f"/><rect x="-10" y="8" width="20" height="5" fill="#4a4a4a"/></g>
+<line x1="1300" y1="374.0" x2="1400" y2="374.0" stroke="#9a9a9a" stroke-width="8" stroke-linecap="round"/>
+<g transform="translate(1412,374) rotate(-90)"><rect x="-10" y="-19" width="20" height="30" rx="3" fill="#262626"/><line x1="0" y1="11" x2="0" y2="37" stroke="#c9c9c9" stroke-width="5"/></g>
+<text x="1470" y="368" font-size="18" font-weight="700" fill="#111" text-anchor="start">암–수 점퍼선 — 이번 회로에서는 쓰지 않는다</text>
+<text x="1470" y="394" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">시침핀에는 암 커넥터가 안 물린다 (40개 보유)</text>
+<rect x="1248" y="428" width="1104" height="88" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<g transform="translate(1288,472) rotate(90)"><rect x="-10" y="-19" width="20" height="38" rx="3" fill="#262626"/><rect x="-4.5" y="-15" width="9" height="10" rx="1.5" fill="#8f8f8f"/><rect x="-10" y="8" width="20" height="5" fill="#4a4a4a"/></g>
+<line x1="1300" y1="472.0" x2="1400" y2="472.0" stroke="#9a9a9a" stroke-width="8" stroke-linecap="round"/>
+<g transform="translate(1412,472) rotate(90)"><rect x="-10" y="-19" width="20" height="38" rx="3" fill="#262626"/><rect x="-4.5" y="-15" width="9" height="10" rx="1.5" fill="#8f8f8f"/><rect x="-10" y="8" width="20" height="5" fill="#4a4a4a"/></g>
+<text x="1470" y="466" font-size="18" font-weight="700" fill="#111" text-anchor="start">암–암 점퍼선 — 수핀 ↔ 수핀</text>
+<text x="1470" y="492" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">수–수가 모자랄 때 이어 늘린다 (20개 보유)</text>
+<rect x="1248" y="526" width="1104" height="96" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<line x1="1310" y1="534.0" x2="1310" y2="614.0" stroke="#a0a0a0" stroke-width="5"/>
+<polygon points="1310,522.0 1320,533.0 1310,544.0 1300,533.0" fill="#9fd8e8" stroke="#5a94a8" stroke-width="1.3"/>
+<g transform="translate(1338,558) rotate(180)"><path d="M -34 -13 L 9 -6 L 30 -2 L 9 2 L -34 9 Z" fill="#333" opacity="0.9"/><path d="M -34 13 L 9 6 L 30 2 L 9 -2 L -34 -9 Z" fill="#333" opacity="0.9"/><rect x="-40" y="-15" width="15" height="30" rx="4" fill="#333"/></g>
+<line x1="1376" y1="558.0" x2="1410" y2="558.0" stroke="#0f9b8e" stroke-width="6" stroke-linecap="round"/>
+<text x="1470" y="568" font-size="18" font-weight="700" fill="#111" text-anchor="start">시침핀 + 악어클립 — 지렁이에 꽂는 전극</text>
+<text x="1470" y="594" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">장식 머리는 절연체다. 머리 아래 금속 축을 문다</text>
+<rect x="1248" y="632" width="1104" height="88" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<rect x="1280" y="652.0" width="46" height="48" rx="6" fill="#1e1e1e"/>
+<circle cx="1294" cy="666.0" r="7" fill="#9a9a9a"/><circle cx="1294" cy="688.0" r="7" fill="#9a9a9a"/>
+<line x1="1326" y1="666.0" x2="1398" y2="666.0" stroke="#d62828" stroke-width="7" stroke-linecap="round"/>
+<line x1="1326" y1="688.0" x2="1398" y2="688.0" stroke="#2a6ecb" stroke-width="7" stroke-linecap="round"/>
+<g transform="translate(1410,666) rotate(-90)"><rect x="-10" y="-19" width="20" height="30" rx="3" fill="#262626"/><line x1="0" y1="11" x2="0" y2="37" stroke="#c9c9c9" stroke-width="5"/></g>
+<g transform="translate(1410,688) rotate(-90)"><rect x="-10" y="-19" width="20" height="30" rx="3" fill="#262626"/><line x1="0" y1="11" x2="0" y2="37" stroke="#c9c9c9" stroke-width="5"/></g>
+<text x="1470" y="670" font-size="18" font-weight="700" fill="#111" text-anchor="start">건전지 스냅 — 9 V 건전지 ↔ 레일</text>
+<text x="1470" y="696" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">9 V 건전지 스냅 홀더 (점퍼선 타입) 2개</text>
+<rect x="1248" y="730" width="1104" height="88" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<g transform="translate(1330,774) rotate(0)"><path d="M -34 -13 L 9 -6 L 30 -2 L 9 2 L -34 9 Z" fill="#0f9b8e" opacity="0.9"/><path d="M -34 13 L 9 6 L 30 2 L 9 -2 L -34 -9 Z" fill="#0f9b8e" opacity="0.9"/><rect x="-40" y="-15" width="15" height="30" rx="4" fill="#0f9b8e"/></g>
+<line x1="1362" y1="774.0" x2="1420" y2="774.0" stroke="#0f9b8e" stroke-width="7" stroke-linecap="round"/>
+<text x="1470" y="768" font-size="18" font-weight="700" fill="#111" text-anchor="start">악어클립 리드 — 호일 ↔ GND 레일</text>
+<text x="1470" y="794" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">악어클립 테스트 리드선 50 cm · 5색</text>
+<rect x="1248" y="828" width="1104" height="126" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<path d="M 1288 867.0 m -20 0 a 20 20 0 1 0 20 -20" stroke="#cfcfcf" stroke-width="6" fill="none" stroke-linecap="round"/>
+<rect x="1290" y="855.0" width="74" height="24" rx="11" fill="#d2d2d2" stroke="#8a8a8a"/>
+<rect x="1364" y="853.0" width="14" height="28" rx="4" fill="#e8c33a" stroke="#a88f20"/>
+<rect x="1378" y="855.0" width="30" height="24" rx="8" fill="#9a9a9a" stroke="#6a6a6a"/>
+<path d="M 1408 867.0 L 1450 867.0" stroke="#333" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M 1340 879.0 L 1340 913.0 L 1294 913.0" stroke="#333" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g transform="translate(1286,913) rotate(180)"><path d="M -34 -13 L 9 -6 L 30 -2 L 9 2 L -34 9 Z" fill="#333" opacity="0.9"/><path d="M -34 13 L 9 6 L 30 2 L 9 -2 L -34 -9 Z" fill="#333" opacity="0.9"/><rect x="-40" y="-15" width="15" height="30" rx="4" fill="#333"/></g>
+<text x="1262" y="845" font-size="12" font-weight="700" fill="#666" text-anchor="middle">훅</text>
+<text x="1430" y="851" font-size="12" font-weight="700" fill="#666" text-anchor="middle">동축</text>
+<text x="1364" y="935" font-size="12" font-weight="700" fill="#666" text-anchor="middle">접지선 + 악어클립</text>
+<text x="1470" y="885" font-size="18" font-weight="700" fill="#111" text-anchor="start">오실로스코프 프로브 한 벌 — 훅 · 동축 케이블 · 접지선 · 악어클립</text>
+<text x="1470" y="911" font-size="17" font-weight="400" fill="#c0392b" text-anchor="start">네 가지가 하나로 붙어 나온다. 스코프 상자에 있는지 확인할 것</text>
+<rect x="1248" y="964" width="1104" height="110" rx="8" fill="#fff" stroke="#e2e2e2"/>
+<rect x="1292" y="1029.0" width="116" height="26" rx="4" fill="#fcfcfa" stroke="#b8b8b0" stroke-width="1.5"/>
+<rect x="1326" y="1037.0" width="8" height="8" rx="1.5" fill="#3a3a3a"/>
+<rect x="1350" y="1037.0" width="8" height="8" rx="1.5" fill="#3a3a3a"/>
+<rect x="1374" y="1037.0" width="8" height="8" rx="1.5" fill="#3a3a3a"/>
+<line x1="1350" y1="1049.0" x2="1350" y2="989.0" stroke="#9a9a9a" stroke-width="4"/>
+<polygon points="1350,977.0 1359,988.0 1350,999.0 1341,988.0" fill="#9fd8e8" stroke="#5a94a8" stroke-width="1.3"/>
+<g transform="translate(1378,1013) rotate(180)"><path d="M -34 -13 L 9 -6 L 30 -2 L 9 2 L -34 9 Z" fill="#0f9b8e" opacity="0.9"/><path d="M -34 13 L 9 6 L 30 2 L 9 -2 L -34 -9 Z" fill="#0f9b8e" opacity="0.9"/><rect x="-40" y="-15" width="15" height="30" rx="4" fill="#0f9b8e"/></g>
+<line x1="1416" y1="1013.0" x2="1446" y2="1013.0" stroke="#0f9b8e" stroke-width="6" stroke-linecap="round"/>
+<text x="1470" y="1013" font-size="18" font-weight="700" fill="#111" text-anchor="start">시침핀 기둥 — 보드 구멍에 세워 꽂는다</text>
+<text x="1470" y="1039" font-size="17" font-weight="400" fill="#2a7a45" text-anchor="start">훅·악어클립이 물 자리 6곳. 래핑와이어는 연선이라 못 쓴다</text>
+<text x="1254" y="1150" font-size="17" font-weight="700" fill="#555" text-anchor="start">초록 글씨 = 이미 있다   ·   주황 글씨 = 확인이 필요하다</text>
+<rect x="50" y="580" width="1130" height="330" rx="14" fill="#fbfbf9" stroke="#c9c9c2" stroke-width="2"/>
+<text x="66" y="566" font-size="25" font-weight="700" fill="#111" text-anchor="start">C.  부품 기호</text>
+<line x1="90" y1="630" x2="230" y2="630" stroke="#9a9a9a" stroke-width="3"/>
+<rect x="134" y="616" width="52" height="28" rx="5" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/>
+<rect x="140" y="616" width="4" height="28" fill="#8a5a2a"/>
+<rect x="149" y="616" width="4" height="28" fill="#111"/>
+<rect x="158" y="616" width="4" height="28" fill="#c33"/>
+<rect x="167" y="616" width="4" height="28" fill="#c9a227"/>
+<rect x="176" y="616" width="4" height="28" fill="#8a4a8a"/>
+<text x="260" y="637" font-size="19" font-weight="700" fill="#111" text-anchor="start">저항  R</text>
+<text x="450" y="637" font-size="17" font-weight="400" fill="#444" text-anchor="start">R1 · R2 · Rb1 · Rb2 · Rin · Rf — 몸통에 색띠 5개가 있다</text>
+<line x1="90" y1="698" x2="230" y2="698" stroke="#9a9a9a" stroke-width="3"/>
+<rect x="136" y="684" width="48" height="28" rx="5" fill="#93b7dd" stroke="#5a7a9a" stroke-width="1.5"/>
+<text x="160" y="704" font-size="13" font-weight="700" fill="#123" text-anchor="middle">104</text>
+<text x="260" y="705" font-size="19" font-weight="700" fill="#111" text-anchor="start">커패시터  C</text>
+<text x="450" y="705" font-size="17" font-weight="400" fill="#444" text-anchor="start">C1 · Cf · Cd — 몸통에 숫자가 인쇄돼 있다</text>
+<rect x="90" y="746" width="140" height="40" rx="5" fill="#3b3b3b"/>
+<circle cx="106" cy="766" r="8" fill="#606060"/>
+<text x="172" y="773" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">TL072</text>
+<text x="260" y="773" font-size="19" font-weight="700" fill="#111" text-anchor="start">IC (DIP-8)</text>
+<text x="450" y="773" font-size="17" font-weight="400" fill="#444" text-anchor="start">TL072 — 홈을 걸치고 왼쪽이 1번 쪽</text>
+<rect x="90" y="812" width="140" height="44" rx="5" fill="#2f2f2f"/>
+<circle cx="112" cy="812" r="6" fill="#c9a227"/>
+<circle cx="112" cy="856" r="6" fill="#c9a227"/>
+<circle cx="144" cy="812" r="6" fill="#c9a227"/>
+<circle cx="144" cy="856" r="6" fill="#c9a227"/>
+<circle cx="176" cy="812" r="6" fill="#c9a227"/>
+<circle cx="176" cy="856" r="6" fill="#c9a227"/>
+<circle cx="208" cy="812" r="6" fill="#c9a227"/>
+<circle cx="208" cy="856" r="6" fill="#c9a227"/>
+<text x="160" y="840" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">AD623</text>
+<text x="260" y="841" font-size="19" font-weight="700" fill="#111" text-anchor="start">모듈 (기판)</text>
+<text x="450" y="841" font-size="17" font-weight="400" fill="#444" text-anchor="start">AD623 — 위아래 금색 점이 납땜할 핀 자리다</text>
+<text x="70" y="898" font-size="17" font-weight="700" fill="#c0392b" text-anchor="start">★ 도면 색은 도면 안에서만 통하는 약속이다. 우리 저항은 1 % 금속피막이라 실물은 파란 몸통일 수 있다.</text>
+<rect x="50" y="960" width="1130" height="470" rx="14" fill="#fbfbf9" stroke="#c9c9c2" stroke-width="2"/>
+<text x="66" y="946" font-size="25" font-weight="700" fill="#111" text-anchor="start">D.  브레드보드 기호</text>
+<rect x="123.5" y="989.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="123.5" y="1021.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="153.5" y="989.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="153.5" y="1021.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="183.5" y="989.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="183.5" y="1021.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<text x="270" y="1019" font-size="19" font-weight="700" fill="#111" text-anchor="start">검은 네모</text>
+<text x="480" y="1019" font-size="17" font-weight="400" fill="#444" text-anchor="start">브레드보드 구멍. 한 열의 A–E 다섯 개가 속에서 이어져 있다</text>
+<rect x="123.5" y="1081.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="153.5" y="1081.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<rect x="183.5" y="1081.5" width="13" height="13" rx="2" fill="#3a3a3a"/>
+<circle cx="160" cy="1088" r="9" fill="#1a5fb4"/>
+<text x="270" y="1095" font-size="19" font-weight="700" fill="#111" text-anchor="start">색 있는 동그라미</text>
+<text x="480" y="1095" font-size="17" font-weight="400" fill="#444" text-anchor="start">선이나 부품 다리를 그 구멍에 꽂는다는 표시</text>
+<line x1="90" y1="1150" x2="230" y2="1150" stroke="#e2a8a8" stroke-width="4"/>
+<line x1="90" y1="1182" x2="230" y2="1182" stroke="#aab8dd" stroke-width="4"/>
+<rect x="95.0" y="1161.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="125.0" y="1161.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="155.0" y="1161.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="185.0" y="1161.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="215.0" y="1161.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<text x="270" y="1171" font-size="19" font-weight="700" fill="#111" text-anchor="start">연한 빨강·파랑 줄</text>
+<text x="480" y="1171" font-size="17" font-weight="400" fill="#444" text-anchor="start">보드에 인쇄된 전원 레일 표시. 한 줄 전체가 속에서 이어져 있다</text>
+<line x1="90" y1="1240" x2="144" y2="1240" stroke="#e2a8a8" stroke-width="4"/>
+<line x1="176" y1="1240" x2="230" y2="1240" stroke="#e2a8a8" stroke-width="4"/>
+<rect x="136" y="1218" width="48" height="44" rx="4" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="270" y="1247" font-size="19" font-weight="700" fill="#111" text-anchor="start">빨간 점선 네모</text>
+<text x="480" y="1247" font-size="17" font-weight="400" fill="#444" text-anchor="start">레일이 여기서 물리적으로 끊겨 있다 (30열 부근)</text>
+<rect x="90" y="1300" width="140" height="32" fill="#e9e9e3" stroke="#d0d0c8"/>
+<rect x="103.0" y="1281.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="133.0" y="1281.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="163.0" y="1281.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="193.0" y="1281.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="103.0" y="1341.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="133.0" y="1341.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="163.0" y="1341.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<rect x="193.0" y="1341.0" width="10" height="10" rx="2" fill="#3a3a3a"/>
+<text x="270" y="1323" font-size="19" font-weight="700" fill="#111" text-anchor="start">가운데 회색 띠</text>
+<text x="480" y="1323" font-size="17" font-weight="400" fill="#444" text-anchor="start">홈. 위(A–E)와 아래(F–J)는 홈을 건너 이어지지 않는다</text>
+<rect x="1230" y="1230" width="1140" height="240" rx="14" fill="#fbfbf9" stroke="#c9c9c2" stroke-width="2"/>
+<text x="1246" y="1216" font-size="25" font-weight="700" fill="#111" text-anchor="start">E.  도면에만 있는 표시 (전선이 아니다)</text>
+<path d="M 1270 1280 L 1360 1280 L 1360 1302" stroke="#888" stroke-width="1.6" stroke-dasharray="7 5" fill="none"/>
+<circle cx="1360" cy="1302" r="11" fill="none" stroke="#888" stroke-width="2"/>
+<text x="1460" y="1287" font-size="18" font-weight="400" fill="#333" text-anchor="start">회색 점선 + 동그라미 = 이름표가 가리키는 자리</text>
+<rect x="1270" y="1324" width="140" height="28" rx="4" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="1460" y="1345" font-size="18" font-weight="400" fill="#333" text-anchor="start">주황 점선 네모 = 여기를 납땜한다</text>
+<line x1="1340" y1="1374" x2="1340" y2="1418" stroke="#1a5fb4" stroke-width="8" stroke-linecap="round"/>
+<line x1="1270" y1="1396" x2="1410" y2="1396" stroke="#fff" stroke-width="17" stroke-linecap="round"/>
+<line x1="1270" y1="1396" x2="1410" y2="1396" stroke="#0f9b8e" stroke-width="8" stroke-linecap="round"/>
+<text x="1460" y="1403" font-size="18" font-weight="400" fill="#333" text-anchor="start">흰 테두리가 있는 선 = 위로 지나간다 (닿지 않는다)</text>
+</svg>
