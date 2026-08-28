@@ -43,15 +43,30 @@ def wire(p1,p2,col):
     (c1,r1),(c2,r2)=p1,p2
     a(f'<path d="M {cx(c1):.0f} {Y(r1):.0f} L {cx(c2):.0f} {Y(r2):.0f}" stroke="{col}" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>')
     a(f'<circle cx="{cx(c1):.0f}" cy="{Y(r1):.0f}" r="6" fill="{col}"/><circle cx="{cx(c2):.0f}" cy="{Y(r2):.0f}" r="6" fill="{col}"/>')
-def part(p1,p2,label,body="#e3cba2",bw=38,lp=None):
+def twidth(s,fs):
+    """글자 폭 어림 — 한글은 fs 한 칸, 라틴·숫자는 0.60 칸."""
+    return sum(fs*(1.0 if ord(ch)>0x2000 else 0.60) for ch in s)
+def tlabel(x,y,s,fs=17,anc='middle',fill='#111'):
+    """구멍 격자 위에 얹혀도 읽히도록 흰 바탕을 깔고 쓴다."""
+    w=twidth(s,fs); h=fs*1.15
+    x0={'middle':x-w/2,'end':x-w}.get(anc,x)
+    a(f'<rect x="{x0-5:.0f}" y="{y-h*0.80:.0f}" width="{w+10:.0f}" height="{h:.0f}" rx="4" fill="#fff" opacity="0.9"/>')
+    a(f'<text x="{x:.0f}" y="{y:.0f}" font-size="{fs}" font-weight="700" text-anchor="{anc}" fill="{fill}">{s}</text>')
+def leader(pts):
+    """이름표 → 부품 지시선. 흰 테두리를 깔아 다른 선 위로 지나간다."""
+    d='M '+' L '.join(f'{px:.0f} {py:.0f}' for px,py in pts)
+    a(f'<path d="{d}" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    a(f'<path d="{d}" stroke="#6a6a6a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    a(f'<circle cx="{pts[-1][0]:.0f}" cy="{pts[-1][1]:.0f}" r="3.5" fill="#6a6a6a"/>')
+def part(p1,p2,label,body="#e3cba2",bw=38,lp=None,anc='middle',ldr=None):
     (c1,r1),(c2,r2)=p1,p2
     x1,y1,x2,y2=cx(c1),Y(r1),cx(c2),Y(r2); mx,my=(x1+x2)/2,(y1+y2)/2
     ang=math.degrees(math.atan2(y2-y1,x2-x1))
     a(f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" stroke="#9a9a9a" stroke-width="2.5"/>')
     a(f'<g transform="translate({mx:.0f},{my:.0f}) rotate({ang:.1f})"><rect x="{-bw/2:.0f}" y="-12" width="{bw:.0f}" height="24" rx="4" fill="{body}" stroke="#8a7a60" stroke-width="1.5"/></g>')
-    vert=abs(y2-y1)>abs(x2-x1)
-    lx,ly=lp if lp else ((mx+30,my+6) if vert else (mx,my-26))
-    a(f'<text x="{lx:.0f}" y="{ly:.0f}" font-size="17" font-weight="700" text-anchor="{"start" if (vert or lp) else "middle"}" fill="#111">{label}</text>')
+    if ldr: leader(ldr)
+    lx,ly=lp if lp else (mx,my-26)
+    tlabel(lx,ly,label,17,anc)
 # ── AD623 모듈 (핀 확정) ──
 mt=['GND','IN+','IN−','+VS']; mb=['GND','OUT','REF','−VS']
 for i in range(4):
@@ -64,7 +79,7 @@ a(f'<rect x="{MOX0:.0f}" y="{MOY0:.0f}" width="{MOX1-MOX0:.0f}" height="{MOY1-MO
 for _r in ('E','F'):
     a(f'<circle cx="{cx(2):.0f}" cy="{Y(_r):.0f}" r="13" fill="none" stroke="#c0392b" stroke-width="3"/>')
     a(f'<circle cx="{cx(2):.0f}" cy="{Y(_r):.0f}" r="5" fill="none" stroke="#c0392b" stroke-width="2"/>')
-a(f'<text x="{MOX0+6:.0f}" y="{MOY0-12:.0f}" font-size="15" font-weight="700" fill="#c0392b">모듈 바닥 면적</text>')
+tlabel(MOX0+6,MOY0-30,'모듈 바닥 면적',15,'start','#c0392b')
 a(f'<rect x="{cx(4)-P*0.5:.0f}" y="{GUT_T+4:.0f}" width="{3*P+P:.0f}" height="{GUT_B-GUT_T-8:.0f}" rx="5" fill="#2f2f2f"/>')
 a(f'<text x="{cx(5.5):.0f}" y="{(GUT_T+GUT_B)/2+7:.0f}" font-size="17" font-weight="700" text-anchor="middle" fill="#fff">AD623 모듈</text>')
 # ── TL072 ──
@@ -82,13 +97,17 @@ wire((7,'B'),(7,'TV'),JMP)                       # +VS
 wire((7,'I'),(7,'BV'),JMP)                       # −VS
 wire((4,'B'),(4,'TG'),JMP)                       # 모듈 GND
 wire((6,'I'),(6,'BG'),JMP)                       # REF → GND
-part((5,'B'),(5,'TG'),'Rb1',lp=(cx(0)-14,RY['A']+6))
-part((6,'B'),(6,'TG'),'Rb2',lp=(cx(0)-14,RY['B']+6))
+# Rb1·Rb2 는 5열·6열로 한 칸 차이라 옆에 이름을 쓸 자리가 없다 → 지시선으로 빼낸다
+_RBY=(RY['B']+RAIL['TG'])/2                       # 두 저항 몸통의 높이
+part((5,'B'),(5,'TG'),'Rb1',lp=(cx(12),RAIL['TG']+24),anc='start',
+     ldr=[(cx(11.8),RAIL['TG']+18),(cx(5),RAIL['TG']+18),(cx(5),_RBY-19)])
+part((6,'B'),(6,'TG'),'Rb2',lp=(cx(12),_RBY+6),anc='start',
+     ldr=[(cx(11.8),_RBY),(cx(6)+13,_RBY)])
 wire((5,'J'),(10,'F'),JMP)                       # OUT →
-part((10,'G'),(13,'G'),'C1',"#93b7dd",32,lp=(cx(11.5)-14,RY['G']+36))
-part((13,'H'),(22,'H'),'Rin',lp=(cx(17)-16,RY['H']+36))
+part((10,'G'),(13,'G'),'C1',"#93b7dd",32,lp=(cx(11.5),RY['G']-12))
+part((13,'H'),(22,'H'),'Rin',lp=(cx(17),RY['H']-14))
 wire((21,'J'),(26,'J'),JMP); wire((22,'I'),(30,'I'),JMP)
-part((26,'H'),(30,'H'),'Rf',lp=(cx(31)+8,RY['H']+6)); part((26,'G'),(30,'G'),'Cf',"#93b7dd",32,lp=(cx(31)+8,RY['G']+6))
+part((26,'H'),(30,'H'),'Rf',lp=(cx(28),RY['H']+18)); part((26,'G'),(30,'G'),'Cf',"#93b7dd",32,lp=(cx(28),RY['G']-12))
 wire((26,'F'),(34,'F'),JMP)
 wire((21,'C'),(21,'TV'),JMP)                     # 8번 V+
 wire((24,'G'),(24,'BV'),JMP)                     # 4번 V−
@@ -96,11 +115,11 @@ wire((23,'G'),(23,'BG'),JMP)                     # 3번 GND
 wire((22,'D'),(23,'D'),JMP)                      # 7번→6번
 wire((22,'C'),(22,'TG'),JMP)                     # 7번→GND
 wire((18,'J'),(18,'BV'),JMP); wire((18,'I'),(18,'C'),JMP)   # V− 를 위로
-part((26,'TV'),(26,'A'),'R1',lp=(cx(26)+26,RY['A']-24))
-part((18,'B'),(26,'B'),'R2',lp=(cx(21)-16,RY['B']+36))
+part((26,'TV'),(26,'A'),'R1',lp=(cx(26)+22,(RAIL['TV']+RY['A'])/2+6),anc='start')
+part((18,'B'),(26,'B'),'R2',lp=(cx(22),RY['B']-12))
 wire((26,'C'),(24,'C'),JMP)                      # 중점 → 5번
-part((10,'TV'),(10,'TG'),'Cd',"#93b7dd",28,lp=(cx(10)+24,(RAIL['TV']+RAIL['TG'])/2+6))
-part((16,'BG'),(16,'BV'),'Cd',"#93b7dd",28,lp=(cx(16)+24,(RAIL['BG']+RAIL['BV'])/2+6))
+part((10,'TV'),(10,'TG'),'Cd',"#93b7dd",28,lp=(cx(10)-22,(RAIL['TV']+RAIL['TG'])/2+6),anc='end')
+part((16,'BG'),(16,'BV'),'Cd',"#93b7dd",28,lp=(cx(16)+22,(RAIL['BG']+RAIL['BV'])/2+6),anc='start')
 def lead(c,r,txt,col,side='L',dx=110):
     yy=Y(r); x=cx(c); x2=x-dx if side=='L' else x+dx
     a(f'<line x1="{x2:.0f}" y1="{yy:.0f}" x2="{x:.0f}" y2="{yy:.0f}" stroke="{col}" stroke-width="6.5" stroke-linecap="round" opacity="0.9"/>')
