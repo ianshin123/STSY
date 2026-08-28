@@ -82,7 +82,7 @@ ic(3,'U1  TL072','A(아래) 입력버퍼 A','B(위) 가상접지')
 ic(11,'U2  TL072','A(아래) 입력버퍼 B','B(위) 남는 반쪽')
 ic(19,'U3  TL072','A(아래) 차동단','B(위) 2단')
 
-# ── 배선 ── (수–수 점퍼선 16개)
+# ── 배선 ── (수–수 점퍼선 18개)
 wire((2,'TG'),(2,'BG'))            # 1
 wire((17,'BV'),(17,'J'))           # 2  V− 를 위로
 wire((17,'I'),(17,'C'))            # 3
@@ -116,6 +116,8 @@ part((26,'B'),(21,'B'),'Rf',lp=(cx(26)+16,RY['B']+6),anc='start')
 part((26,'C'),(21,'C'),'Cf',"#93b7dd",32,lp=(cx(26)+16,RY['C']+6),anc='start')
 wire((22,'A'),(22,'TG'))           # 16 U3b +입력 → GND
 part((12,'D'),(13,'D'),'1 Ω',"#e3cba2",30,lp=(cx(11)-8,RY['D']+6),anc='end')
+wire((5,'H'),(1,'B'))            # 17 전극 B 를 위쪽으로
+wire((13,'H'),(16,'B'))          # 18 전극 A 를 위쪽으로
 part((14,'B'),(14,'TG'),'10 kΩ',lp=(cx(13)-8,(RY['B']+Y('TG'))/2+6),anc='end')
 for c in (7,18):
     part((c,'TV'),(c,'TG'),'Cd',"#93b7dd",28,lp=(cx(c)-22,(RAIL['TV']+RAIL['TG'])/2+6),anc='end')
@@ -126,7 +128,7 @@ def lead(c,r,txt,col,side='L',dx=110):
     a(f'<line x1="{x2:.0f}" y1="{yy:.0f}" x2="{x:.0f}" y2="{yy:.0f}" stroke="{col}" stroke-width="6.5" stroke-linecap="round" opacity="0.9"/>')
     a(f'<circle cx="{x:.0f}" cy="{yy:.0f}" r="6" fill="{col}"/>')
     a(f'<text x="{(x2-10) if side=="L" else (x2+10):.0f}" y="{yy+6:.0f}" font-size="17" text-anchor="{"end" if side=="L" else "start"}" fill="#111">{txt}</text>')
-for c,r,lab in [(13,'J','① 전극 A'),(5,'J','② 전극 B'),(10,'BG','③ 접지 전극'),
+for c,r,lab in [(16,'A','① 전극 A'),(1,'A','② 전극 B'),(10,'BG','③ 접지 전극'),
                 (15,'TG','④ 케이지 호일'),(26,'E','⑦ 프로브 훅'),(28,'BG','⑧ 스코프 접지')]:
     a(f'<circle cx="{cx(c):.0f}" cy="{Y(r):.0f}" r="15" fill="#fff" stroke="{PRB if lab[0] in "⑦⑧" else ALG}" stroke-width="3.5"/>')
     a(f'<text x="{cx(c):.0f}" y="{Y(r)+6:.0f}" font-size="16" font-weight="700" text-anchor="middle" fill="#333">{lab[0]}</text>')
@@ -141,9 +143,9 @@ for i,t in enumerate([
  '선 색은 실물의 종류다 — 파랑 = 수–수 점퍼선 · 청록 = 악어클립 리드 · 보라 = 건전지 스냅 · 검정 = 프로브.']):
     c='#c0392b' if i in (1,2,3) else '#444'; fw='700' if i in (1,2,3) else '400'
     a(f'<text x="{BL:.0f}" y="{108+i*26:.0f}" font-size="17" fill="{c}" font-weight="{fw}">{t}</text>')
-a(f'<text x="{BL:.0f}" y="{RAIL["BV"]+70:.0f}" font-size="17" fill="#c0392b" font-weight="700">①–⑧ 은 시침핀 기둥 자리다. 전극 A(13열)와 전극 B(5열)는 약 20 mm 떨어져 있어 악어클립 두 개가 닿지 않는다.</text>')
+a(f'<text x="{BL:.0f}" y="{RAIL["BV"]+70:.0f}" font-size="17" fill="#c0392b" font-weight="700">①–⑧ 은 시침핀 기둥 자리다. 전극 A(16열)와 전극 B(1열)는 약 38 mm 떨어져 있어 악어클립 두 개가 닿지 않는다.</text>')
 ly=H-118
-for i,(c,t) in enumerate([(JMP,'수–수 점퍼선 16개'),(ALG,'악어클립 리드 4개'),(SNP,'건전지 스냅 1개'),(PRB,'프로브')]):
+for i,(c,t) in enumerate([(JMP,'수–수 점퍼선 18개'),(ALG,'악어클립 리드 4개'),(SNP,'건전지 스냅 1개'),(PRB,'프로브')]):
     a(f'<line x1="{BL+i*300:.0f}" y1="{ly:.0f}" x2="{BL+44+i*300:.0f}" y2="{ly:.0f}" stroke="{c}" stroke-width="6.5" stroke-linecap="round"/>')
     a(f'<text x="{BL+56+i*300:.0f}" y="{ly+7:.0f}" font-size="18" fill="#111">{t}</text>')
 for i,t in enumerate([
