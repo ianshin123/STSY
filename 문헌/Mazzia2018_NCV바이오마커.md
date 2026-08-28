@@ -5,7 +5,7 @@
 *Aporrectodea caliginosa* exposed to insecticides" ·
 *Environmental Science and Pollution Research* · **25(24):24362–24367** · 2018 ·
 DOI 10.1007/s11356-018-2469-1
-접근: **무료 전문 (HAL 저자 기탁본)** | 원문: `원문/Mazzia2018_NCV바이오마커.pdf` ✅ **확보·확인 완료**
+접근: **무료 전문 (HAL 저자 기탁본)** | 원문: [`원문/Mazzia2018_NCV바이오마커.pdf`](원문/Mazzia2018_NCV바이오마커.pdf) ✅ **확보·확인 완료**
 교신저자: Christophe Mazzia · christophe.mazzia@univ-avignon.fr
 
 > 원 설계 문서가 적은 권호 **24는 틀렸다. 25권 24호**다 (Crossref · HAL · 논문 헤더 일치).

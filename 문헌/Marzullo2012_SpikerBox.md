@@ -4,9 +4,9 @@
 Increasing Public Participation in Neuroscience Inquiry" ·
 *PLOS ONE* · 7(3):e30837 · 2012 · DOI 10.1371/journal.pone.0030837
 접근: **무료 전문 + 부록** | 원문: ✅ **확보·확인 완료**
-- 본문 `원문/Marzullo2012_SpikerBox.pdf`
-- **회로도·제작 가이드** `원문/Marzullo2012_부록_회로도와제작가이드.docx` (File S1)
-- **부품표** `원문/Marzullo2012_부록_부품표.xlsx` (File S10)
+- 본문 [`원문/Marzullo2012_SpikerBox.pdf`](원문/Marzullo2012_SpikerBox.pdf)
+- **회로도·제작 가이드** [`원문/Marzullo2012_부록_회로도와제작가이드.docx`](원문/Marzullo2012_부록_회로도와제작가이드.docx) (File S1)
+- **부품표** [`원문/Marzullo2012_부록_부품표.xlsx`](원문/Marzullo2012_부록_부품표.xlsx) (File S10)
 
 URL: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030837
 

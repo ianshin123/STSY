@@ -4,7 +4,7 @@
 "Experimental validation of the nerve conduction velocity selective recording technique
 using a multi-contact cuff electrode" ·
 *Medical Engineering & Physics* · **31(2009):1261–1270**
-접근: 유료 | 원문: `원문/Yoshida2009_커프전극.pdf` ✅ **확보·확인 완료** (신이안 제공)
+접근: 유료 | 원문: [`원문/Yoshida2009_커프전극.pdf`](원문/Yoshida2009_커프전극.pdf) ✅ **확보·확인 완료** (신이안 제공)
 
 **종이 *Lumbricus terrestris* 로 우리와 일치한다.**
 

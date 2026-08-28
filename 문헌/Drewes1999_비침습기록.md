@@ -2,7 +2,7 @@
 
 서지: Drewes CD · "Non-invasive Recording of Giant Nerve Fiber Action Potentials from
 Freely Moving Oligochaetes" · *Tested Studies for Laboratory Teaching* (ABLE) · 20:45–62 · 1999
-접근: **무료 PDF** | 원문: `원문/Drewes1999_비침습기록.pdf` ✅ **확보·확인 완료**
+접근: **무료 PDF** | 원문: [`원문/Drewes1999_비침습기록.pdf`](원문/Drewes1999_비침습기록.pdf) ✅ **확보·확인 완료**
 URL: https://www.ableweb.org/biologylabs/wp-content/uploads/volumes/vol-20/2-drewes.pdf
 
 > ## ⚠ 이 논문의 실험체는 지렁이가 아니다

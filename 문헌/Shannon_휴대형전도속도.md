@@ -4,7 +4,7 @@
 "Portable conduction velocity experiments using earthworms for the college and high school
 neuroscience teaching laboratory" ·
 *Advances in Physiology Education* · 38(1):62–70 · 2014
-접근: **무료 전문 (PMC)** | 원문: `원문/Shannon_휴대형전도속도_PMC전문.html` ✅ **확보·확인 완료**
+접근: **무료 전문 (PMC)** | 원문: [`원문/Shannon_휴대형전도속도_PMC전문.html`](원문/Shannon_휴대형전도속도_PMC전문.html) ✅ **확보·확인 완료**
 URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4116350/
 
 형식 주의: **PMC 전문 HTML**이다. 그림은 없다.
