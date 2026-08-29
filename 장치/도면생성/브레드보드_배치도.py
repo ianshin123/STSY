@@ -2,6 +2,9 @@
 import io, math
 P=32.0; X0=205.0; CA,CB=0,37
 SPLIT=30
+# 레일 구멍은 5개마다 한 칸씩 빈다. 0열부터 5개(0–4)가 한 묶음이고 c%6==5 인 열(5·11·17·23·29)에 구멍이 없다.
+# 실물 사진과 신이안의 현물 확인 (2026-08-29). 위상이 다른 보드를 쓰면 이 숫자 하나만 고친다.
+RAILGAP=5
 ROWS=['A','B','C','D','E','F','G','H','I','J']
 RY={}; y=372.0
 for r in ROWS[:5]: RY[r]=y; y+=P
@@ -25,7 +28,7 @@ for key,col,lab in [('TV',RAILR,'V+'),('TG',RAILB,'GND'),('BG',RAILR,'GND'),('BV
     a(f'<line x1="{cx(CA)-30:.0f}" y1="{yy-18:.0f}" x2="{cx(SPLIT-2)+8:.0f}" y2="{yy-18:.0f}" stroke="{col}" stroke-width="3"/>')
     a(f'<line x1="{cx(SPLIT+1)-8:.0f}" y1="{yy-18:.0f}" x2="{cx(CB)+28:.0f}" y2="{yy-18:.0f}" stroke="{col}" stroke-width="3"/>')
     for c in range(CA,CB+1):
-        if c%6!=0 and not (SPLIT-1<=c<=SPLIT): hole(cx(c),yy,9)
+        if c%6!=RAILGAP and not (SPLIT-1<=c<=SPLIT): hole(cx(c),yy,9)
     a(f'<text x="{BR+12:.0f}" y="{yy+6:.0f}" font-size="21" font-weight="700" fill="#111">{lab}</text>')
 for yy0,yy1 in [(RAIL['TV'],RAIL['TG']),(RAIL['BG'],RAIL['BV'])]:
     a(f'<rect x="{cx(SPLIT-1)-8:.0f}" y="{yy0-34:.0f}" width="{2*P+16:.0f}" height="{yy1-yy0+44:.0f}" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>')
@@ -36,8 +39,9 @@ for r in ROWS:
     a(f'<text x="{BR+14:.0f}" y="{RY[r]+6:.0f}" font-size="17" fill="#444">{r}</text>')
 for c in range(CA,CB+1):
     if c%5==0:
-        a(f'<text x="{cx(c):.0f}" y="{RY["A"]-16:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
-        a(f'<text x="{cx(c):.0f}" y="{RY["J"]+26:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
+        for ty in (RY["A"]-16, RY["J"]+26):     # 부품이 위를 지나가도 읽히게 흰 바탕을 깐다
+            a(f'<rect x="{cx(c)-11:.0f}" y="{ty-13:.0f}" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>')
+            a(f'<text x="{cx(c):.0f}" y="{ty:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
 def Y(r): return RAIL[r] if r in RAIL else RY[r]
 def wire(p1,p2,col):
     (c1,r1),(c2,r2)=p1,p2
@@ -96,10 +100,10 @@ wire((14,'TG'),(14,'BG'),JMP)                     # GND 위아래
 wire((7,'B'),(7,'TV'),JMP)                       # +VS
 wire((7,'I'),(7,'BV'),JMP)                       # −VS
 wire((4,'B'),(4,'TG'),JMP)                       # 모듈 GND
-wire((6,'I'),(5,'BG'),JMP)                       # REF → GND · 레일 6열은 구멍이 없다
+wire((6,'I'),(6,'BG'),JMP)                       # REF → GND
 # Rb1·Rb2 는 5열·6열로 한 칸 차이라 옆에 이름을 쓸 자리가 없다 → 지시선으로 빼낸다
 _RBY=(RY['B']+RAIL['TG'])/2                       # 두 저항 몸통의 높이
-part((5,'B'),(5,'TG'),'Rb1',lp=(cx(12),RAIL['TG']+24),anc='start',
+part((5,'B'),(6,'TG'),'Rb1',lp=(cx(12),RAIL['TG']+24),anc='start',   # 레일 구멍 없는 열(5·11·17·23·29)을 피한다
      ldr=[(cx(11.8),RAIL['TG']+18),(cx(5),RAIL['TG']+18),(cx(5),_RBY-19)])
 part((6,'B'),(7,'TG'),'Rb2',lp=(cx(12),_RBY+6),anc='start',
      ldr=[(cx(11.8),_RBY),(cx(6)+13,_RBY)])
@@ -110,11 +114,11 @@ wire((21,'J'),(26,'J'),JMP); wire((22,'I'),(30,'I'),JMP)
 part((26,'H'),(30,'H'),'Rf',lp=(cx(28),RY['H']+18)); part((26,'G'),(30,'G'),'Cf',"#93b7dd",32,lp=(cx(28),RY['G']-12))
 wire((26,'F'),(34,'F'),JMP)
 wire((21,'C'),(21,'TV'),JMP)                     # 8번 V+
-wire((24,'G'),(23,'BV'),JMP)                     # 4번 V− · 레일 24열은 구멍이 없다
-wire((23,'G'),(23,'BG'),JMP)                     # 3번 GND
+wire((24,'G'),(24,'BV'),JMP)                     # 4번 V−
+wire((23,'G'),(22,'BG'),JMP)                     # 3번 GND   # 레일 구멍 없는 열(5·11·17·23·29)을 피한다
 wire((22,'D'),(23,'D'),JMP)                      # 7번→6번
 wire((22,'C'),(22,'TG'),JMP)                     # 7번→GND
-wire((18,'J'),(17,'BV'),JMP); wire((18,'I'),(18,'C'),JMP)   # V− 를 위로 · 레일 18열은 구멍이 없다
+wire((18,'J'),(18,'BV'),JMP); wire((18,'I'),(18,'C'),JMP)   # V− 를 위로
 part((26,'TV'),(26,'A'),'R1',lp=(cx(26)+22,(RAIL['TV']+RY['A'])/2+6),anc='start')
 part((18,'B'),(26,'B'),'R2',lp=(cx(22),RY['B']-12))
 wire((26,'C'),(24,'C'),JMP)                      # 중점 → 5번
@@ -146,6 +150,12 @@ for i,(c,t) in enumerate([(JMP,'수–수 점퍼선'),(ALG,'악어클립 리드'
     a(f'<text x="{BL+56+i*300:.0f}" y="{ly+7:.0f}" font-size="18" fill="#111">{t}</text>')
 a(f'<text x="{BL:.0f}" y="{ly+40:.0f}" font-size="17" fill="#444">AD623 모듈 핀은 실물 표기대로다 — 윗줄 GND · IN+ · IN− · +VS / 아랫줄 GND · OUT · REF · −VS. 이득 트리머가 달려 있으므로 RG 저항은 꽂지 않는다.</text>')
 a(f'<text x="{BL:.0f}" y="{ly+68:.0f}" font-size="17" fill="#444">모듈의 두 핀 줄이 홈을 걸치지 못하면, 암–수 점퍼선으로 모듈을 보드 옆에 두고 연결한다.</text>')
+# 열 번호는 맨 마지막에 한 번 더 — 부품이 위에 눕는 자리에서도 읽히게
+for c in range(CA,CB+1):
+    if c%5==0:
+        for ty in (RY["A"]-16, RY["J"]+26):
+            a(f'<rect x="{cx(c)-11:.0f}" y="{ty-13:.0f}" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>')
+            a(f'<text x="{cx(c):.0f}" y="{ty:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
 a('</svg>')
 # ── 저장: SVG 와 PNG 를 같이 만든다 ──
 import os, cairosvg

@@ -4,6 +4,9 @@
 import io, math
 P=32.0; X0=205.0; CA,CB=0,32
 SPLIT=30
+# 레일 구멍은 5개마다 한 칸씩 빈다. 0열부터 5개(0–4)가 한 묶음이고 c%6==5 인 열(5·11·17·23·29)에 구멍이 없다.
+# 실물 사진과 신이안의 현물 확인 (2026-08-29). 위상이 다른 보드를 쓰면 이 숫자 하나만 고친다.
+RAILGAP=5
 ROWS=['A','B','C','D','E','F','G','H','I','J']
 RY={}; y=468.0            # 머리글이 7줄이라 보드를 그만큼 내렸다
 for r in ROWS[:5]: RY[r]=y; y+=P
@@ -27,7 +30,7 @@ for key,col,lab in [('TV',RAILR,'V+'),('TG',RAILB,'GND'),('BG',RAILR,'GND'),('BV
     a(f'<line x1="{cx(CA)-30:.0f}" y1="{yy-18:.0f}" x2="{cx(SPLIT-2)+8:.0f}" y2="{yy-18:.0f}" stroke="{col}" stroke-width="3"/>')
     a(f'<line x1="{cx(SPLIT+1)-8:.0f}" y1="{yy-18:.0f}" x2="{cx(CB)+28:.0f}" y2="{yy-18:.0f}" stroke="{col}" stroke-width="3"/>')
     for c in range(CA,CB+1):
-        if c%6!=0 and not (SPLIT-1<=c<=SPLIT): hole(cx(c),yy,9)
+        if c%6!=RAILGAP and not (SPLIT-1<=c<=SPLIT): hole(cx(c),yy,9)
     a(f'<text x="{BR+12:.0f}" y="{yy+6:.0f}" font-size="21" font-weight="700" fill="#111">{lab}</text>')
 for yy0,yy1 in [(RAIL['TV'],RAIL['TG']),(RAIL['BG'],RAIL['BV'])]:
     a(f'<rect x="{cx(SPLIT-1)-8:.0f}" y="{yy0-34:.0f}" width="{2*P+16:.0f}" height="{yy1-yy0+44:.0f}" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>')
@@ -38,8 +41,9 @@ for r in ROWS:
     a(f'<text x="{BR+14:.0f}" y="{RY[r]+6:.0f}" font-size="17" fill="#444">{r}</text>')
 for c in range(CA,CB+1):
     if c%5==0:
-        a(f'<text x="{cx(c):.0f}" y="{RY["A"]-16:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
-        a(f'<text x="{cx(c):.0f}" y="{RY["J"]+26:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
+        for ty in (RY["A"]-16, RY["J"]+26):     # 부품이 위를 지나가도 읽히게 흰 바탕을 깐다
+            a(f'<rect x="{cx(c)-11:.0f}" y="{ty-13:.0f}" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>')
+            a(f'<text x="{cx(c):.0f}" y="{ty:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
 
 def twidth(s,fs): return sum(fs*(1.0 if ord(ch)>0x2000 else 0.60) for ch in s)
 def tlabel(x,y,s,fs=17,anc='middle',fill='#111'):
@@ -84,7 +88,7 @@ ic(19,'U3  TL072','A(아래) 차동단','B(위) 2단')
 
 # ── 배선 ── (수–수 점퍼선 18개)
 wire((2,'TG'),(2,'BG'))            # 1
-wire((17,'BV'),(17,'J'))           # 2  V− 를 위로
+wire((18,'BV'),(17,'J'))           # 2  V− 를 위로   # 레일 구멍 없는 열(5·11·17·23·29)을 피한다
 wire((17,'I'),(17,'C'))            # 3
 part((9,'TV'),(9,'A'),'R1',lp=(cx(9)+20,(RAIL['TV']+RY['A'])/2+6),anc='start')
 part((17,'B'),(9,'B'),'R2',lp=(cx(13),RY['B']-14))
@@ -92,12 +96,12 @@ wire((9,'C'),(6,'C'))              # 4  분압 중점 → U1b +입력
 part((4,'D'),(5,'D'),'1 Ω',"#e3cba2",30,lp=(cx(3)-8,RY['D']+6),anc='end')
 wire((4,'C'),(4,'TG'))             # 5  U1b 출력 = 가상접지
 wire((3,'B'),(3,'TV'))             # 6
-wire((6,'I'),(5,'BV'))             # 7
-wire((11,'B'),(11,'TV'))           # 8
+wire((6,'I'),(6,'BV'))             # 7
+wire((11,'B'),(12,'TV'))           # 8   # 레일 구멍 없는 열(5·11·17·23·29)을 피한다
 wire((14,'I'),(14,'BV'))           # 9
 wire((19,'B'),(19,'TV'))           # 10
 wire((22,'I'),(22,'BV'))           # 11
-part((5,'J'),(5,'BG'),'Rb2',lp=(cx(4)-8,(RY['J']+Y('BG'))/2+6),anc='end')
+part((5,'J'),(6,'BG'),'Rb2',lp=(cx(4)-8,(RY['J']+Y('BG'))/2+6),anc='end')   # 레일 구멍 없는 열(5·11·17·23·29)을 피한다
 part((13,'J'),(13,'BG'),'Rb1',lp=(cx(12)-8,(RY['J']+Y('BG'))/2+6),anc='end')
 wire((3,'J'),(8,'J'))              # 12 U1a 출력 연장
 part((8,'I'),(4,'I'),'Ra',lp=(cx(6),RY['I']-16))
@@ -139,7 +143,7 @@ for i,t in enumerate([
  'AD623 미도착 시의 대체 회로. TL072 3개로 3-op-amp 계측증폭기를 만든다. 보드는 열 0–60 · 행 A–E / F–J, 여기는 0–32 만 그렸다.',
  '★ 신호는 전부 아래쪽(F–J)으로 지나가고, 위쪽(A–E)은 전원 · 가상접지 · 2단만 쓴다. 그래서 부품이 IC 위로 지나가지 않는다.',
  '★ 레일만 30열 부근에서 끊겨 있다. 레일에 붙는 것은 전부 28열 왼쪽에 두었다.',
- '★ 레일 구멍은 5개마다 한 칸씩 비어 있다 — 0 · 6 · 12 · 18 · 24 · 30 열에는 구멍이 없다. 레일에 붙는 것은 전부 구멍이 있는 열에 두었다.',
+ '★ 레일 구멍은 5개마다 한 칸씩 비어 있다 — 0열부터 다섯 개(0–4)가 한 묶음이고 5 · 11 · 17 · 23 · 29 열에는 구멍이 없다.',
  '   그래도 레일은 통째로 한 덩어리라 구멍이 어긋나면 옆 구멍에 꽂아도 전기적으로 같다.',
  '★ 차동단의 R3 · R3′ · R4 · R4′ 는 10 kΩ 40개 중에서 멀티미터로 재어 가장 비슷한 4개를 고른다. 여기서 CMRR 이 정해진다.',
  '선 색은 실물의 종류다 — 파랑 = 수–수 점퍼선 · 청록 = 악어클립 리드 · 보라 = 건전지 스냅 · 검정 = 프로브.']):
@@ -156,6 +160,12 @@ for i,t in enumerate([
  '1 Ω 두 개는 점퍼선 대신이다 — 되먹임에 넣는 1 Ω 은 전기적으로 점퍼와 같다.',
  '★ Ra · Rb · R3 · R4 의 몸통이 다른 열 위를 지나가는데, 그 아래는 전부 수–수 점퍼선이라 맨 리드가 닿을 곳이 없다. 맨 리드끼리 겹치던 자리는 없앴다.']):
     a(f'<text x="{BL:.0f}" y="{ly+40+i*26:.0f}" font-size="17" fill="#444">{t}</text>')
+# 열 번호는 맨 마지막에 한 번 더 — 부품이 위에 눕는 자리에서도 읽히게
+for c in range(CA,CB+1):
+    if c%5==0:
+        for ty in (RY["A"]-16, RY["J"]+26):
+            a(f'<rect x="{cx(c)-11:.0f}" y="{ty-13:.0f}" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>')
+            a(f'<text x="{cx(c):.0f}" y="{ty:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
 a('</svg>')
 import os, cairosvg
 OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','그림')
