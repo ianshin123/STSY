@@ -44,7 +44,7 @@ parts.append('''
     <li>기호표 — 그림의 기호가 실물의 무엇인가</li>
     <li>브레드보드 배치도</li>
     <li>회로 원리도</li>
-    <li>예비예비실험 — 무엇을 얻는가 · 순서 10단계 · 소신호 · 안전 · 기록표</li>
+    <li>2026-08-29 예비실험 계획 — 순서 10단계 · 소신호 · 안전 (실행 완료 · 보관)</li>
     <li>결선표 48항목 · 부품표 · 조립 순서</li>
     <li>장치 설명 — 부품이 하는 일과 용어</li>
   </ol>
@@ -77,8 +77,8 @@ for i,(t,p,cap) in enumerate(FIGS,1):
       <img src="{img(p)}"/>
     </section>''')
 
-parts.append('<section class="text"><h2>5. 예비예비실험 — 그날 무엇을 하는가</h2>'
-             + md2html('예비예비실험.md', drop_before='## 1. 이 실험에서 무엇을 얻는가') + '</section>')
+parts.append('<section class="text"><h2>5. 2026-08-29 예비실험 계획 — 실행 완료</h2>'
+             + md2html('보관/2026-08-29_예비실험계획.md', drop_before='## 1. 이 실험에서 무엇을 얻는가') + '</section>')
 
 parts.append('<section class="text"><h2>6. 결선표 48항목 · 부품표 · 조립 순서</h2>'
              + md2html('장치/TL072계측증폭기.md', drop_before='## 1. 왜 이렇게 하는가') + '</section>')
