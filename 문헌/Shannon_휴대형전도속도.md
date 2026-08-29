@@ -51,7 +51,7 @@ URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4116350/
 
 | 항목 | 값 |
 |---|---|
-| 전극 | **금속 핀 3개.** 지렁이를 **등쪽이 위로** 놓고 중심선에서 살짝 벗어나게 삽입 |
+| 전극 | **금속 핀 3개 — 기록 1 · 기록 2 · 기준(접지).** 아래 ★ |
 | 삽입 깊이 | **몸을 관통해 나무/스티로폼 받침까지** |
 | 자극 | 유리 또는 플라스틱 탐침으로 **가볍게 톡** — 탭당 보통 **1–3개 스파이크** |
 | LGF | **꼬리쪽** 자극 · 전극도 꼬리쪽 |
@@ -62,6 +62,36 @@ URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4116350/
 | 보관 | 젖은 흙 통에 담아 **냉장고** |
 
 **LGF와 MGF를 동시에 재지 않는다 — 전극을 옮겨 두 번 잰다.**
+
+### ★ 전극 3개가 어떻게 붙는가 — 원문 §Materials and Methods, *Equipment and software* (2026-08-29 확인)
+
+> "The recording electrodes [**electrode 1, electrode 2, and reference (sometimes also called
+> "ground"）**] inserted into the worm connected to our two-channel SpikerBox…"
+
+**즉 채널마다 기록 전극이 하나씩이고, 두 채널이 기준(접지) 전극 하나를 함께 쓴다.**
+지렁이에 꽂는 핀은 모두 **3개**다. 채널당 두 개짜리 「기록 쌍」이 아니다.
+지렁이를 등쪽이 위로 놓고 중심선에서 살짝 벗어나게, **몸을 관통해 받침까지** 꽂는다.
+
+전극 실물은 **«map pins soldered to speaker wire»** — 압정을 스피커선에 납땜한 것.
+받침은 **2.5 cm 눈금을 그은 스티로폼**이고 여기서 전극 간 거리를 읽는다.
+
+### ★ SpikerBox 증폭기의 실제 수치 (같은 절 · 원문 확인)
+
+| 항목 | 값 |
+|---|---|
+| 총 이득 | **880 ×** |
+| 1단 | **AD623** · 이득 **4 ×** · 입력 임피던스 **2 GΩ** |
+| 2단 | **TLC2272** · 이득 **220 ×** · **대역통과 300–1,300 Hz** |
+| 오디오단 | LM386 |
+| 출력 | **3.5 mm 스테레오 잭 → 노트북 line in** (배터리 구동 권장) |
+| 노트북에 스테레오 line-in 이 없으면 | **USB 사운드카드** (본문 예: iMic · US$40). «USB sound cards can sometimes generate a 1-kHz ringing noise artifact» |
+| 녹음 | **Audacity** · 입력을 "line in" 으로 |
+
+> **우리 회로와 다른 두 가지 (우리 비교).**
+> ① **1단 이득이 4 배뿐이다.** 우리 1단은 직류결합 **92 배**라 전극 오프셋 32.6 mV 에서 포화한다.
+> Shannon 은 4 배라 같은 자리에서 750 mV 까지 견딘다.
+> ② **대역이 300–1,300 Hz 로 우리(103 Hz–3.39 kHz)보다 훨씬 좁다.**
+> **둘 다 회로를 고치는 일이므로 신이안이 정한다. 아직 하지 않았다.**
 
 ---
 
