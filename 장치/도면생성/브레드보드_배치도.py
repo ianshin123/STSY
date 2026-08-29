@@ -96,12 +96,12 @@ wire((14,'TG'),(14,'BG'),JMP)                     # GND 위아래
 wire((7,'B'),(7,'TV'),JMP)                       # +VS
 wire((7,'I'),(7,'BV'),JMP)                       # −VS
 wire((4,'B'),(4,'TG'),JMP)                       # 모듈 GND
-wire((6,'I'),(6,'BG'),JMP)                       # REF → GND
+wire((6,'I'),(5,'BG'),JMP)                       # REF → GND · 레일 6열은 구멍이 없다
 # Rb1·Rb2 는 5열·6열로 한 칸 차이라 옆에 이름을 쓸 자리가 없다 → 지시선으로 빼낸다
 _RBY=(RY['B']+RAIL['TG'])/2                       # 두 저항 몸통의 높이
 part((5,'B'),(5,'TG'),'Rb1',lp=(cx(12),RAIL['TG']+24),anc='start',
      ldr=[(cx(11.8),RAIL['TG']+18),(cx(5),RAIL['TG']+18),(cx(5),_RBY-19)])
-part((6,'B'),(6,'TG'),'Rb2',lp=(cx(12),_RBY+6),anc='start',
+part((6,'B'),(7,'TG'),'Rb2',lp=(cx(12),_RBY+6),anc='start',
      ldr=[(cx(11.8),_RBY),(cx(6)+13,_RBY)])
 wire((5,'J'),(10,'F'),JMP)                       # OUT →
 part((10,'G'),(13,'G'),'C1',"#93b7dd",32,lp=(cx(11.5),RY['G']-12))
@@ -110,11 +110,11 @@ wire((21,'J'),(26,'J'),JMP); wire((22,'I'),(30,'I'),JMP)
 part((26,'H'),(30,'H'),'Rf',lp=(cx(28),RY['H']+18)); part((26,'G'),(30,'G'),'Cf',"#93b7dd",32,lp=(cx(28),RY['G']-12))
 wire((26,'F'),(34,'F'),JMP)
 wire((21,'C'),(21,'TV'),JMP)                     # 8번 V+
-wire((24,'G'),(24,'BV'),JMP)                     # 4번 V−
+wire((24,'G'),(23,'BV'),JMP)                     # 4번 V− · 레일 24열은 구멍이 없다
 wire((23,'G'),(23,'BG'),JMP)                     # 3번 GND
 wire((22,'D'),(23,'D'),JMP)                      # 7번→6번
 wire((22,'C'),(22,'TG'),JMP)                     # 7번→GND
-wire((18,'J'),(18,'BV'),JMP); wire((18,'I'),(18,'C'),JMP)   # V− 를 위로
+wire((18,'J'),(17,'BV'),JMP); wire((18,'I'),(18,'C'),JMP)   # V− 를 위로 · 레일 18열은 구멍이 없다
 part((26,'TV'),(26,'A'),'R1',lp=(cx(26)+22,(RAIL['TV']+RY['A'])/2+6),anc='start')
 part((18,'B'),(26,'B'),'R2',lp=(cx(22),RY['B']-12))
 wire((26,'C'),(24,'C'),JMP)                      # 중점 → 5번
