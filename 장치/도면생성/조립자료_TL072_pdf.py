@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""예비예비실험(TL072 계측증폭기) 조립 자료 PDF.
+"""TL072 계측증폭기 조립 자료 PDF — 지금 쓰는 회로의 참조.
 AD623 판인 「조립자료_pdf.py」와 **같은 형식**이다 — 표지 · 도면 4쪽 · 본문.
 읽어들이는 문서와 도면만 다르다."""
 import io, os, re, base64, subprocess, markdown
@@ -33,18 +33,17 @@ FIGS=[('전체 연결도','장치/그림/전체연결도_TL072IA.png',
 parts=[]
 parts.append('''
 <section class="cover">
-  <h1>예비예비실험 조립 자료 — TL072 계측증폭기</h1>
-  <p class="sub">2026년 8월 28일 · 측정장치팀 신이안 · 북일고등학교</p>
-  <p class="lead"><b>AD623 이 해외배송으로 도착하지 않았다.</b> 보유한 TL072 세 개로
-  같은 3-op-amp 계측증폭기를 밖에서 만들어 조립과 측정을 연습한다.
-  이 묶음 하나로 끝나게 정리했고, <b>AD623 판 조립 자료와 같은 형식</b>이다.</p>
+  <h1>TL072 계측증폭기 — 조립 자료</h1>
+  <p class="sub">2026년 8월 29일 조립·검증 완료 · 측정장치팀 신이안 · 북일고등학교</p>
+  <p class="lead"><b>지금 쓰는 회로다.</b> AD623 이 오지 않아 보유한 TL072 세 개로 같은
+  3-op-amp 계측증폭기를 밖에서 만들었고, <b>2026-08-29 실험에서 작동을 확인했다</b>
+  (양쪽 전극 상쇄 0 V · 비마취 지렁이에서 자극 반응). <b>AD623 으로 다시 만들지 않는다.</b></p>
   <h2>이 묶음에 있는 것</h2>
   <ol class="toc">
     <li>전체 연결도 — 지렁이 · 건전지 · 오실로스코프까지</li>
     <li>기호표 — 그림의 기호가 실물의 무엇인가</li>
     <li>브레드보드 배치도</li>
     <li>회로 원리도</li>
-    <li>2026-08-29 예비실험 계획 — 순서 10단계 · 소신호 · 안전 (실행 완료 · 보관)</li>
     <li>결선표 48항목 · 부품표 · 조립 순서</li>
     <li>장치 설명 — 부품이 하는 일과 용어</li>
   </ol>
@@ -77,28 +76,25 @@ for i,(t,p,cap) in enumerate(FIGS,1):
       <img src="{img(p)}"/>
     </section>''')
 
-parts.append('<section class="text"><h2>5. 2026-08-29 예비실험 계획 — 실행 완료</h2>'
-             + md2html('보관/2026-08-29_예비실험계획.md', drop_before='## 1. 이 실험에서 무엇을 얻는가') + '</section>')
-
-parts.append('<section class="text"><h2>6. 결선표 48항목 · 부품표 · 조립 순서</h2>'
+parts.append('<section class="text"><h2>5. 결선표 48항목 · 부품표 · 조립 순서</h2>'
              + md2html('장치/TL072계측증폭기.md', drop_before='## 1. 왜 이렇게 하는가') + '</section>')
 
 # 7절은 AD623 판과 공통 문서다. 다만 4-2·4-3절은 AD623 소자 전용이라 6절 2-1 로 보낸다.
-parts.append('<section class="text"><h2>7. 장치 설명 — 부품이 하는 일과 용어</h2>'
+parts.append('<section class="text"><h2>6. 장치 설명 — 부품이 하는 일과 용어</h2>'
              + '<blockquote><b>이 절은 AD623 판 조립 자료와 같은 문서다.</b> '
                '전원부 · 브레드보드 · 전극 · 색띠 · 케이지는 두 회로가 같다. '
-               '<b>증폭 부분만 소자가 다르고, 그것은 위 6절 2-1 절에 있다.</b></blockquote>'
+               '<b>증폭 부분만 소자가 다르고, 그것은 위 5절 2-1 절에 있다.</b></blockquote>'
              + md2html('장치/장치설명.md',
                        drop_before='## 1. 이 장치가 하는 일을 한 문장으로',
                        cuts=[('### 4-2. 1단 — AD623 계측증폭기',
                               '### 4-4. 전극 — 왜 세 개인가',
-                              '### 4-2 · 4-3. 1단 · 2단 — **이 판에서는 6절 2-1 절을 본다**\n\n'
+                              '### 4-2 · 4-3. 1단 · 2단 — **이 판에서는 5절 2-1 절을 본다**\n\n'
                               'AD623 판은 계측증폭기 칩 하나가 1단을 맡는다. '
                               '**이 회로는 그것을 TL072 세 개로 밖에서 만들었으므로 1단과 차동단이 나뉘어 있다.**\n\n'
                               '2단(C1 · Rin · Rf · Cf)은 두 판이 부품도 값도 같다.\n\n')])
              + '</section>')
 
-html=f'''<!doctype html><html><head><meta charset="utf-8"><title>예비예비실험 조립 자료 — TL072</title>
+html=f'''<!doctype html><html><head><meta charset="utf-8"><title>TL072 계측증폭기 조립 자료</title>
 <style>
 @page {{ size: A4 landscape; margin: 12mm 14mm; }}
 body {{ font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif; font-size:9.5pt; line-height:1.55; color:#111; margin:0; }}
@@ -130,7 +126,7 @@ p,ul,ol {{ margin:4pt 0; }} li {{ margin:1.5pt 0; }}
 </style></head><body>{''.join(parts)}</body></html>'''
 HERE=os.path.dirname(os.path.abspath(__file__))
 TMP=os.path.join(HERE,'_bundle_tl072.html')
-PDF=os.path.normpath(os.path.join(HERE,'..','예비예비실험_조립자료_TL072.pdf'))
+PDF=os.path.normpath(os.path.join(HERE,'..','조립자료_TL072.pdf'))
 io.open(TMP,'w',encoding='utf-8').write(html)
 print('html', len(html)//1024, 'KB')
 CHROME=os.environ.get('CHROME','/opt/pw-browsers/chromium')
