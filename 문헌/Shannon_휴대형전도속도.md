@@ -26,10 +26,32 @@ URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4116350/
 
 > "**Carbonated water can also be used as an anesthetic if ethanol is not available.**
 > Carbonated water (60%) can be prepared by mixing **30 ml of sugar-free seltzer water**
-> … **with 20 ml of tap water**."
+> (also called "club soda" or "sparkling water" at grocery stores) **with 20 ml of tap water**."
+
+> "The typical time in the **alcohol or carbonated water** solution for sufficient anesthesia
+> is ∼5 min."
+
+**즉 시간은 두 마취제가 같다고 적혀 있다.** 다만 아래 경고를 함께 본다.
+
+### ★ 절차에서 빠뜨리기 쉬운 두 줄 (원문 · 2026-08-29 확인)
+
+> "We placed the earthworms in the alcohol anesthetic for ∼5 min, **briefly rinsed them off in
+> tap water**, and then began the experiments."
+
+> "**The effects of the anesthetic typically last 5–10 min.**"
+
+> "It is important to **not leave the worms in the anesthetic solution excessively**,
+> as the worms **will not produce action potentials** and can also perish."
+
+**헹구지 않으면 몸에 남은 마취제가 계속 작용한다.** 헹군 뒤 **5–10분**이 실험 창이다.
+**과마취하면 활동전위가 아예 안 나온다** — 같은 경고가
+[`Kladt2010_프로토콜9종.md`](Kladt2010_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C9%EC%A2%85.md)에도 있다
+(«muscles and skin sensory cells are inactive, but the giant fibers … are still responding»).
+
+**10 % 에탄올 조제법도 원문에 있다**: 수돗물 30 ml + **80 proof(40 %) 보드카 10 ml** = 40 ml
+→ 에탄올 4 ml / 40 ml = 10 % v/v.
 
 마취 확인법: **탐침으로 머리·꼬리를 건드려 도피반사(수축)가 사라지면 된 것.**
-효과 지속 **5–10분**. 마취 후 수돗물로 몇 초 헹군다.
 
 > ### ⚠ 보고된 속도값은 **에탄올** 마취 조건이다
 > 탄산수는 "에탄올이 없을 때의 대안"으로 제시됐을 뿐,
