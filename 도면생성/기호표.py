@@ -192,7 +192,7 @@ erow(2,d_over,'흰 테두리가 있는 선 = 위로 지나간다 (닿지 않는�
 a('</svg>')
 # ── 저장: SVG 와 PNG 를 같이 만든다 ──
 import os, cairosvg
-OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','그림')
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','이번주','장치','그림')
 SVG=os.path.normpath(os.path.join(OUT,'기호표.svg'))
 PNG=os.path.normpath(os.path.join(OUT,'기호표.png'))
 io.open(SVG,'w',encoding='utf-8').write('\n'.join(o))

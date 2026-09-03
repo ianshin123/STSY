@@ -4,7 +4,7 @@ AD623 판인 「조립자료_pdf.py」와 **같은 형식**이다 — 표지 · 
 읽어들이는 문서와 도면만 다르다."""
 import io, os, re, base64, subprocess, markdown
 
-ROOT=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..'))
+ROOT=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
 def md2html(path, drop_before=None, drop_after=None, cuts=()):
     s=io.open(os.path.join(ROOT,path),encoding='utf-8').read()
     if drop_before: s=s[s.index(drop_before):]
@@ -21,13 +21,13 @@ def img(path):
     b=base64.b64encode(open(os.path.join(ROOT,path),'rb').read()).decode()
     return f'data:image/png;base64,{b}'
 
-FIGS=[('전체 연결도 (1채널 · 오실로스코프 판 — 지난 판)','장치/그림/전체연결도_TL072IA.png',
+FIGS=[('전체 연결도 (1채널 · 오실로스코프 판 — 지난 판)','이번주/장치/그림/전체연결도_TL072IA.png',
        '★ 지금 쓰는 배선이 아니다. 실험실에는 「2채널 전체 연결도」를 들고 간다. 보드 안쪽 배선은 이 그림과 같다.'),
-      ('기호표','장치/그림/기호표.png',
+      ('기호표','이번주/장치/그림/기호표.png',
        '그림의 기호가 실물의 무엇인지. 선 색은 역할이 아니라 실물의 종류를 나타낸다.'),
-      ('브레드보드 배치도','장치/그림/브레드보드_배치도_TL072IA.png',
+      ('브레드보드 배치도','이번주/장치/그림/브레드보드_배치도_TL072IA.png',
        '보드 안쪽만 크게 본 것.'),
-      ('회로 원리도','장치/그림/회로도_TL072IA.png',
+      ('회로 원리도','이번주/장치/그림/회로도_TL072IA.png',
        '전기 기호로 그린 회로. 실제로 꽂는 자리는 위 두 도면을 본다.')]
 
 parts=[]
@@ -46,7 +46,7 @@ parts.append('''
     채널마다 기록 하나 + 두 채널이 기준(접지) 하나를 함께 쓴다
     (그래서 <b>결선 24번이 1 MΩ 이 아니라 1 Ω 이다</b>).</p>
     <p><b>실험실에는 「2채널 전체 연결도」한 장을 들고 간다</b>
-    (<code>장치/전체연결도_2채널.pdf</code>). <b>이 묶음은 보드 한 장을 조립할 때의
+    (<code>이번주/장치/전체연결도_2채널.pdf</code>). <b>이 묶음은 보드 한 장을 조립할 때의
     결선표·부품표 참조로 쓴다</b> — 5절과 6절이 그것이다.</p>
   </div>
   <h2>이 묶음에 있는 것</h2>
@@ -87,14 +87,14 @@ for i,(t,p,cap) in enumerate(FIGS,1):
     </section>''')
 
 parts.append('<section class="text"><h2>5. 결선표 48항목 · 부품표 · 조립 순서</h2>'
-             + md2html('장치/TL072계측증폭기.md', drop_before='## 1. 왜 이렇게 하는가') + '</section>')
+             + md2html('이번주/장치/TL072계측증폭기.md', drop_before='## 1. 왜 이렇게 하는가') + '</section>')
 
 # 7절은 AD623 판과 공통 문서다. 다만 4-2·4-3절은 AD623 소자 전용이라 6절 2-1 로 보낸다.
 parts.append('<section class="text"><h2>6. 장치 설명 — 부품이 하는 일과 용어</h2>'
              + '<blockquote><b>이 절은 AD623 판 조립 자료와 같은 문서다.</b> '
                '전원부 · 브레드보드 · 전극 · 색띠 · 케이지는 두 회로가 같다. '
                '<b>증폭 부분만 소자가 다르고, 그것은 위 5절 2-1 절에 있다.</b></blockquote>'
-             + md2html('장치/장치설명.md',
+             + md2html('이번주/장치/장치설명.md',
                        drop_before='## 1. 이 장치가 하는 일을 한 문장으로',
                        cuts=[('### 4-2. 1단 — AD623 계측증폭기',
                               '### 4-4. 전극 — 왜 세 개인가',
@@ -136,7 +136,7 @@ p,ul,ol {{ margin:4pt 0; }} li {{ margin:1.5pt 0; }}
 </style></head><body>{''.join(parts)}</body></html>'''
 HERE=os.path.dirname(os.path.abspath(__file__))
 TMP=os.path.join(HERE,'_bundle_tl072.html')
-PDF=os.path.normpath(os.path.join(HERE,'..','조립자료_TL072.pdf'))
+PDF=os.path.normpath(os.path.join(HERE,'..','이번주','장치','조립자료_TL072.pdf'))
 io.open(TMP,'w',encoding='utf-8').write(html)
 print('html', len(html)//1024, 'KB')
 CHROME=os.environ.get('CHROME','/opt/pw-browsers/chromium')

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import io, os, re, base64, subprocess, markdown
 
-ROOT=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..'))
+ROOT=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
 def md2html(path, drop_before=None, drop_after=None):
     s=io.open(os.path.join(ROOT,path),encoding='utf-8').read()
     if drop_before: s=s[s.index(drop_before):]
@@ -15,10 +15,10 @@ def img(path):
     b=base64.b64encode(open(os.path.join(ROOT,path),'rb').read()).decode()
     return f'data:image/png;base64,{b}'
 
-FIGS=[('전체연결도','장치/그림/전체연결도.png','조립할 때 펴 놓는 도면이다. 번호 ①–⑧ 은 아래 표와 짝이다.'),
-      ('기호표','장치/그림/기호표.png','그림의 기호가 실물의 무엇인지. 선 색은 실물의 종류를 나타낸다.'),
-      ('브레드보드 배치도','장치/그림/브레드보드_배치도.png','보드 안쪽만 크게 본 것.'),
-      ('회로 원리도','장치/그림/회로도.png','전기 기호로 그린 회로. 실제로 꽂는 자리는 위 두 도면을 본다.')]
+FIGS=[('전체연결도','보관/그림/전체연결도.png','조립할 때 펴 놓는 도면이다. 번호 ①–⑧ 은 아래 표와 짝이다.'),
+      ('기호표','이번주/장치/그림/기호표.png','그림의 기호가 실물의 무엇인지. 선 색은 실물의 종류를 나타낸다.'),
+      ('브레드보드 배치도','보관/그림/브레드보드_배치도.png','보드 안쪽만 크게 본 것.'),
+      ('회로 원리도','보관/그림/회로도.png','전기 기호로 그린 회로. 실제로 꽂는 자리는 위 두 도면을 본다.')]
 
 parts=[]
 parts.append(f'''
@@ -60,10 +60,15 @@ for i,(t,p,cap) in enumerate(FIGS,1):
       <img src="{img(p)}"/>
     </section>''')
 
+# 「3. 부품값을 정하는 법」은 TL072 판과 공유하므로 이번주/장치/부품값.md 로 떼어 두었다.
+# AD623 판 PDF 에는 그 자리에 다시 끼워 넣는다 — 결선표와 부품값은 한 부에 같이 있어야 한다.
 parts.append('<section class="text"><h2>5. 결선표 · 부품값 · 조립 순서</h2>'
-             + md2html('장치/회로도.md', drop_before='## 1. 부품 배치') + '</section>')
+             + md2html('보관/AD623_회로도.md', drop_before='## 1. 부품 배치',
+                       drop_after='## 3. 부품값을 정하는 법')
+             + md2html('이번주/장치/부품값.md', drop_before='### 3-1. 분압 저항')
+             + md2html('보관/AD623_회로도.md', drop_before='## 4. 조립 순서') + '</section>')
 parts.append('<section class="text"><h2>6. 장치 설명</h2>'
-             + md2html('장치/장치설명.md', drop_before='## 1. 이 장치가 하는 일을 한 문장으로') + '</section>')
+             + md2html('이번주/장치/장치설명.md', drop_before='## 1. 이 장치가 하는 일을 한 문장으로') + '</section>')
 
 html=f'''<!doctype html><html><head><meta charset="utf-8"><title>STSY 예비실험 조립 자료</title>
 <style>
@@ -98,7 +103,7 @@ p,ul,ol {{ margin:4pt 0; }} li {{ margin:1.5pt 0; }}
 </style></head><body>{''.join(parts)}</body></html>'''
 HERE=os.path.dirname(os.path.abspath(__file__))
 TMP=os.path.join(HERE,'_bundle.html')
-PDF=os.path.normpath(os.path.join(HERE,'..','예비실험_조립자료.pdf'))
+PDF=os.path.normpath(os.path.join(HERE,'..','보관','AD623판_조립자료.pdf'))
 io.open(TMP,'w',encoding='utf-8').write(html)
 print('html', len(html)//1024, 'KB')
 

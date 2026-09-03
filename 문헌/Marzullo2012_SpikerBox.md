@@ -22,7 +22,7 @@ URL: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030837
 > using a voltage follower."
 
 **SpikerBox는 9 V 하나를 ±4.5 V로 쪼갠다.** 저자가 든 이유는 휴대성이다.
-결과적으로 **AD623의 공급전압 절대최대 12 V 안에 들어간다** → [`../장비.md`](../%EC%9E%A5%EC%B9%98/%EC%9E%A5%EB%B9%84.md).
+결과적으로 **AD623의 공급전압 절대최대 12 V 안에 들어간다** → [`../장비.md`](../%EC%9D%B4%EB%B2%88%EC%A3%BC/%EC%9E%A5%EC%B9%98/%EC%9E%A5%EB%B9%84.md).
 
 ### 1단 — AD623 계측증폭기
 

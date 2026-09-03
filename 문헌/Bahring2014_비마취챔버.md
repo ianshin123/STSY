@@ -3,8 +3,8 @@
 서지: Bähring R, Bauer CK · "Easy method to examine single nerve fiber excitability and
 conduction parameters using intact nonanesthetized earthworms" ·
 *Advances in Physiology Education* · 38:253–264 · 2014 · doi:10.1152/advan.00137.2013
-접근: **무료 전문 (PMC)** | 원문: **`원문/Bahring2014_비마취챔버.pdf`** ✅ **출판사 PDF · 그림 포함**
-보조: `원문/Bahring2014_비마취챔버_PMC전문.html` (그림 없음)
+접근: **무료 전문 (PMC)** | 원문: **[`원문/Bahring2014_비마취챔버.pdf`](원문/Bahring2014_비마취챔버.pdf)** ✅ **출판사 PDF · 그림 포함**
+보조: [`원문/Bahring2014_비마취챔버_PMC전문.html`](원문/Bahring2014_비마취챔버_PMC전문.html) (그림 없음)
 URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4154267/
 
 > **2026-08-26, 신이안이 출판사 PDF를 제공했다.** 이전에는 그림 없는 PMC HTML만 있었다.
@@ -15,7 +15,7 @@ URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4154267/
 
 > ## ✅ 보조자료 확보 (2026-08-27 · 신이안 제공)
 >
-> `원문/Bahring2014_보조자료/`
+> [`원문/Bahring2014_보조자료/`](원문/Bahring2014_보조자료/)
 >
 > | 파일 | 내용 |
 > |---|---|
@@ -122,7 +122,7 @@ Hamburg 의대 1학년 세포생리 실습. **마취하지 않은 온전한 지�
 > **우리가 3D 프린터로 만든다면** — 원본은 아크릴을 밀링해 접착한 것이라 부품이 나뉘어
 > 있지만, 출력이면 한 덩어리로 뽑을 수 있다. **다만 「사포로 모서리를 다듬어라」는 경고는
 > 적층 자국이 남는 출력물에서 더 크게 걸린다.** 이건 우리 추론이고 논문의 말이 아니다.
-> **무엇을 어떻게 만들지는 아직 정해지지 않았다** → [`../출발점.md`](../출발점.md).
+> **무엇을 어떻게 만들지는 아직 정해지지 않았다** → [`../README.md`](../README.md).
 
 ### 튜토리얼에서 확인된 값
 
@@ -171,6 +171,40 @@ Hamburg 의대 1학년 세포생리 실습. **마취하지 않은 온전한 지�
 
 Weiss 형식(q = r·t + r·c)으로 재분석했을 때 적합도 **R² = 0.9872**.
 학생의 작도값과 Weiss 값의 차이는 rheobase에서만 유의(P = 0.0161), chronaxie는 무의(P = 0.1821).
+
+### 수식 — 원문 §APPENDIX · Fig. 1 (2026-09-02 원문 확인) ★★
+
+**a = 자극 진폭 · t = 자극 지속시간 · r = rheobase · c = chronaxie · q = a × t**
+
+| | 식 | 형태 |
+|---|---|---|
+| **Lapicque** | **a = r + (r · c) / t** | 쌍곡선. r 은 t → ∞ 의 점근선 |
+| **Weiss** | **q = r · t + r · c = r · (t + c)** | **직선.** 기울기가 **r**, y절편이 **r·c**, x절편이 **−c** |
+
+**chronaxie 의 정의**: **a = 2r 이 되는 t**. 위 식에 a = 2r 을 넣으면 (r·c)/t = r 이므로 t = c 다.
+두 식은 **q = a·t 로 서로 나누고 곱해 변환된다 — r 과 c 의 뜻이 같다.**
+
+> "the linear dependence of q on t makes the Weiss analysis extremely informative, and,
+> **theoretically, only two good measurements would be necessary to determine r and c**"
+
+#### ★ 직선(Weiss) 적합이 쌍곡선 직접 적합보다 잘 맞았다 — 원문의 실측 비교
+
+| 적합 방식 | R² (n = 64) |
+|---|---|
+| **Weiss 직선** | **0.9872 ± 0.0020** |
+| 쌍곡선 직접 적합 | **0.9434 ± 0.0077** |
+
+> "direct application of a hyperbolic function … yielded **slightly worse fits** (R² = 0.9434 ± 0.0077)
+> than the Weiss analysis (R² = 0.9872 ± 0.0020, n = 64, **P < 0.0001**)."
+
+원문은 「진폭–지속시간 자료가 순수한 쌍곡선에서 벗어나면서도 Weiss 식에는 잘 맞는다」는
+선행 문헌(인용 3, 23, 31)을 근거로 든다.
+
+**학생의 작도(Lapicque)는 r 을 약간 과대평가**했고, 그 결과 **c 는 과소평가**됐다 (Fig. 6 D·E).
+
+#### 에너지 최소점
+
+자극의 에너지 **e = a × q** 이고 **chronaxie 조건에서 최소**가 된다 (Fig. 1C · 인용 14).
 
 ---
 

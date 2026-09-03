@@ -68,7 +68,7 @@ earthworm (*Aporrectodea caliginosa*) and aquatic oligochaete (*Lumbriculus vari
 > **단일 금속(구리) · 정의된 농도 2단계 · 시간 경과 · 회복**을 함께 본 것이다 (초록만 확보).
 > 종이 *L. variegatus* 이고 금속이 구리라는 점은 그 노트에 적어 두었다.
 
-**우리가 그중 무엇을 다룰지는 아직 정해지지 않았다** → [`../출발점.md`](../출발점.md).
+**우리가 그중 무엇을 다룰지는 아직 정해지지 않았다** → [`../README.md`](../README.md).
 
 ---
 

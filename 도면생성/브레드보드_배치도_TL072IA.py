@@ -169,7 +169,7 @@ for c in range(CA,CB+1):
             a(f'<text x="{cx(c):.0f}" y="{ty:.0f}" font-size="15" text-anchor="middle" fill="#444">{c}</text>')
 a('</svg>')
 import os, cairosvg
-OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','그림')
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','이번주','장치','그림')
 SVG=os.path.normpath(os.path.join(OUT,'브레드보드_배치도_TL072IA.svg'))
 PNG=os.path.normpath(os.path.join(OUT,'브레드보드_배치도_TL072IA.png'))
 io.open(SVG,'w',encoding='utf-8').write('\n'.join(o))
