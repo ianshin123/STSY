@@ -56,7 +56,8 @@
 | | |
 |---|---|
 | ★ [`조립자료_TL072.pdf`](%EC%9E%A5%EC%B9%98/%EC%A1%B0%EB%A6%BD%EC%9E%90%EB%A3%8C_TL072.pdf) | **보드 조립의 참조 한 부** (도면 5장 · 결선표 · 조립 순서 · 장치 설명) |
-| ★ [`그림/브레드보드_배치도_1번보드.png`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_1%EB%B2%88%EB%B3%B4%EB%93%9C.png) · [`2번보드`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_2%EB%B2%88%EB%B3%B4%EB%93%9C.png) | **꽂으면서 보는 것** — 부품마다 값과 색띠가 적혀 있다 |
+| ★ [`그림/브레드보드_배치도_AD623_1번보드.png`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_AD623_1%EB%B2%88%EB%B3%B4%EB%93%9C.png) · [`2번보드`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_AD623_2%EB%B2%88%EB%B3%B4%EB%93%9C.png) | **★ AD623 판 — 꽂으면서 보는 것** (2026-09-05 · 모듈 2개 도착) |
+| [`그림/브레드보드_배치도_1번보드.png`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_1%EB%B2%88%EB%B3%B4%EB%93%9C.png) · [`2번보드`](%EC%9E%A5%EC%B9%98/%EA%B7%B8%EB%A6%BC/%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C_%EB%B0%B0%EC%B9%98%EB%8F%84_2%EB%B2%88%EB%B3%B4%EB%93%9C.png) | TL072 판 — 부품마다 값과 색띠가 적혀 있다 |
 | ★ [`전체연결도_2채널.pdf`](%EC%9E%A5%EC%B9%98/%EC%A0%84%EC%B2%B4%EC%97%B0%EA%B2%B0%EB%8F%84_2%EC%B1%84%EB%84%90.pdf) | **실험실에 들고 가는 한 장** |
 | [`TL072계측증폭기.md`](%EC%9E%A5%EC%B9%98/TL072%EA%B3%84%EC%B8%A1%EC%A6%9D%ED%8F%AD%EA%B8%B0.md) | 지금 쓰는 회로 · 결선표 48항목 |
 | [`부품값.md`](%EC%9E%A5%EC%B9%98/%EB%B6%80%ED%92%88%EA%B0%92.md) | 부품값 정하는 식과 제약 · 이득을 바꿀 때의 Rf·Cf 짝 |
