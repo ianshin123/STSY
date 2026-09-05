@@ -154,9 +154,9 @@ T(960,330,'입력 버퍼 두 개가 전극을 물지 않고 받고(입력저항 
 T(960,356,'차동단이 두 출력의 차이만 남긴다.',17,'#555')
 a('</svg>')
 import cairosvg
-OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','이번주','장치','그림')
-SVG=os.path.normpath(os.path.join(OUT,'회로도_TL072IA.svg'))
-PNG=os.path.normpath(os.path.join(OUT,'회로도_TL072IA.png'))
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','보관','그림')
+SVG=os.path.normpath(os.path.join(OUT,'TL072판_회로도.svg'))
+PNG=os.path.normpath(os.path.join(OUT,'TL072판_회로도.png'))
 io.open(SVG,'w',encoding='utf-8').write('\n'.join(o))
 cairosvg.svg2png(url=SVG, write_to=PNG, output_width=2460)
 print('저장:', SVG, '·', PNG)

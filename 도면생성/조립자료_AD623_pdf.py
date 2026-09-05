@@ -29,13 +29,12 @@ FIGS=[('2채널 전체 연결도 — 실험실에 들고 가는 한 장','이번
        '1번 보드와 자리가 같다. 없는 것은 R1·R2 와 가상접지 배선뿐이고, 대신 6열 C행에 10 kΩ 이 하나 더 들어간다.'),
       ('기호표','이번주/장치/그림/기호표.png',
        '그림의 기호가 실물의 무엇인지. 선 색은 역할이 아니라 실물의 종류를 나타낸다.'),
-      ('회로 원리도','이번주/장치/그림/회로도_TL072IA.png',
-       '전기 기호로 그린 회로. 실제로 꽂는 자리는 위 도면들을 본다.')]
+      ]
 
 parts=[]
 parts.append('''
 <section class="cover">
-  <h1>TL072 계측증폭기 — 조립 자료</h1>
+  <h1>AD623 계측증폭기 — 조립 자료</h1>
   <p class="sub">2026년 8월 29일 조립·검증 완료 · 측정장치팀 신이안 · 북일고등학교</p>
   <p class="lead"><b>지금 쓰는 회로다.</b> AD623 이 오지 않아 보유한 TL072 세 개로 같은
   3-op-amp 계측증폭기를 밖에서 만들었고, <b>2026-08-29 실험에서 작동을 확인했다</b>
@@ -89,7 +88,7 @@ for i,(t,p,cap) in enumerate(FIGS,1):
     </section>''')
 
 parts.append('<section class="text"><h2>5. 결선표 48항목 · 부품표 · 조립 순서</h2>'
-             + md2html('이번주/장치/TL072계측증폭기.md', drop_before='## 1. 왜 이렇게 하는가') + '</section>')
+             + md2html('이번주/장치/AD623계측증폭기.md', drop_before='## 1. 왜 갈아탔나') + '</section>')
 
 # 7절은 AD623 판과 공통 문서다. 다만 4-2·4-3절은 AD623 소자 전용이라 6절 2-1 로 보낸다.
 parts.append('<section class="text"><h2>6. 장치 설명 — 부품이 하는 일과 용어</h2>'
@@ -138,7 +137,7 @@ p,ul,ol {{ margin:4pt 0; }} li {{ margin:1.5pt 0; }}
 </style></head><body>{''.join(parts)}</body></html>'''
 HERE=os.path.dirname(os.path.abspath(__file__))
 TMP=os.path.join(HERE,'_bundle_tl072.html')
-PDF=os.path.normpath(os.path.join(HERE,'..','이번주','장치','조립자료_TL072.pdf'))
+PDF=os.path.normpath(os.path.join(HERE,'..','이번주','장치','조립자료_AD623.pdf'))
 io.open(TMP,'w',encoding='utf-8').write(html)
 print('html', len(html)//1024, 'KB')
 CHROME=os.environ.get('CHROME','/opt/pw-browsers/chromium')
