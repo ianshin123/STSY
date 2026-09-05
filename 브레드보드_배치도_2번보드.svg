@@ -1,0 +1,939 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1976" height="2270" viewBox="0 0 1976 2270" font-family="Noto Sans CJK KR, sans-serif"><rect width="1976" height="2270" fill="#fff"/>
+<text x="216" y="72" font-size="31" font-weight="700" fill="#111">브레드보드 배치도 — 2번 보드 · 채널 2   [AD623 판]   전원부가 없다 (레일 3줄을 1번에서)</text>
+<text x="216" y="106" font-size="17" fill="#c0392b" font-weight="700">★ 저항마다 이름 아래 붉은 글씨가 실제로 꽂는 값이다. 몸통의 색띠도 그 값의 띠다. 그래도 꽂기 전에 멀티미터로 잰다.</text>
+<text x="216" y="133" font-size="17" fill="#c0392b" font-weight="700">★ Rb1 과 Rb2 는 반드시 같은 1 MΩ 이다 — AD623 바이어스 전류 17 nA 가 1 MΩ 을 지나면 17 mV 다. 한쪽만 달면 그것이 통째로 직류 오프셋이 되어 증폭된다.</text>
+<text x="216" y="160" font-size="17" fill="#c0392b" font-weight="700">★ 이득 저항 Rg 를 꽂지 않는다 — 모듈 위의 트리머로 맞춘다. 이득을 100 이하로 둔다 (그 위로 가면 대역폭이 3 kHz 아래로 떨어진다).</text>
+<text x="216" y="187" font-size="17" fill="#c0392b" font-weight="700">★ 차동단 저항 네 개가 없어졌다 — CMRR 이 칩 안에서 공장 트리밍돼 있다. 10 kΩ 40개를 재서 고르는 일이 필요 없다.</text>
+<text x="216" y="214" font-size="17" fill="#c0392b" font-weight="700">★ 잭 브레이크아웃은 보드에 직접 못 꽂는다 (레일에만 걸린다) — 암–수 점퍼선 4개로 30–33열 J행까지 뺀다. TIP 이 33열이다.</text>
+<text x="216" y="241" font-size="17" fill="#c0392b" font-weight="700">★ 레일 구멍은 5개마다 한 칸씩 비어 있다 — 5 · 11 · 17 · 23 · 29 열에 구멍이 없다. 레일은 30열 부근에서 끊긴다.</text>
+<text x="216" y="268" font-size="17" fill="#c0392b" font-weight="700">★ AD623 실물 방향: 윗 E행은 GND·OUT·REF·−VS, 아래 I행은 GND·IN+·IN−·+VS다.</text>
+<text x="216" y="295" font-size="17" fill="#c0392b" font-weight="700">★ 모듈이 3열 I행을 가리므로 −VS는 3열 B행에서 아래 V− 레일 3열로 점퍼 하나만 꽂는다.</text>
+<text x="216" y="322" font-size="17" fill="#c0392b" font-weight="700">★ 아랫 IN+는 9열로 빼서 전극과 Rb1을 나눠 꽂고, 윗 OUT은 10열을 거쳐 아래 필터로 내린다.</text>
+<text x="216" y="349" font-size="17" fill="#444" font-weight="400">AD623 모듈과 TL072 는 왼쪽이 GND(또는 1번) 쪽이 되게 꽂는다.  총 이득 = 트리머(100 이하) × 3.03.</text>
+<text x="216" y="376" font-size="17" fill="#444" font-weight="400">보드는 열 0–60 · 행 A–E / F–J 다. 여기는 0–36 만 그렸다. 선 색 = 실물의 종류 (파랑 점퍼선 · 청록 악어클립 · 보라 건전지 스냅 · 검정 오디오).</text>
+<text x="216" y="403" font-size="17" fill="#c0392b" font-weight="700">2번 보드의 남는 TL072 반쪽은 출력과 −입력만 잇는다. 출력을 GND 레일에 직결하면 1번 보드의 가상접지 버퍼와 충돌하므로 금지한다.</text>
+<rect x="216" y="468" width="1294" height="682" rx="10" fill="#fcfcfa" stroke="#c2c2ba" stroke-width="2"/>
+<rect x="216" y="786" width="1294" height="74" fill="#ebebe5"/>
+<text x="228" y="829" font-size="15" fill="#8a8a8a">홈</text>
+<line x1="270" y1="492" x2="1204" y2="492" stroke="#e2a8a8" stroke-width="3"/>
+<line x1="1284" y1="492" x2="1480" y2="492" stroke="#e2a8a8" stroke-width="3"/>
+<rect x="295.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.5" y="505.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<text x="1522" y="516" font-size="21" font-weight="700" fill="#111">V+</text>
+<line x1="270" y1="532" x2="1204" y2="532" stroke="#aab8dd" stroke-width="3"/>
+<line x1="1284" y1="532" x2="1480" y2="532" stroke="#aab8dd" stroke-width="3"/>
+<rect x="295.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.5" y="545.5" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<text x="1522" y="556" font-size="21" font-weight="700" fill="#111">GND</text>
+<line x1="270" y1="1050" x2="1204" y2="1050" stroke="#e2a8a8" stroke-width="3"/>
+<line x1="1284" y1="1050" x2="1480" y2="1050" stroke="#e2a8a8" stroke-width="3"/>
+<rect x="295.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.5" y="1063.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<text x="1522" y="1074" font-size="21" font-weight="700" fill="#111">GND</text>
+<line x1="270" y1="1090" x2="1204" y2="1090" stroke="#aab8dd" stroke-width="3"/>
+<line x1="1284" y1="1090" x2="1480" y2="1090" stroke="#aab8dd" stroke-width="3"/>
+<rect x="295.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.5" y="1103.1" width="9" height="9" rx="1.5" fill="#3a3a3a"/>
+<text x="1522" y="1114" font-size="21" font-weight="700" fill="#111">V−</text>
+<rect x="1220" y="476" width="80" height="84" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
+<rect x="1220" y="1034" width="80" height="84" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="1264" y="462" font-size="16" font-weight="700" text-anchor="middle" fill="#c0392b">레일만 여기서 끊긴다</text>
+<rect x="295.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="637.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="648" font-size="17" text-anchor="end" fill="#444">A</text>
+<text x="1524" y="648" font-size="17" fill="#444">A</text>
+<rect x="295.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="669.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="680" font-size="17" text-anchor="end" fill="#444">B</text>
+<text x="1524" y="680" font-size="17" fill="#444">B</text>
+<rect x="295.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="701.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="712" font-size="17" text-anchor="end" fill="#444">C</text>
+<text x="1524" y="712" font-size="17" fill="#444">C</text>
+<rect x="295.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="733.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="744" font-size="17" text-anchor="end" fill="#444">D</text>
+<text x="1524" y="744" font-size="17" fill="#444">D</text>
+<rect x="295.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="765.0" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="776" font-size="17" text-anchor="end" fill="#444">E</text>
+<text x="1524" y="776" font-size="17" fill="#444">E</text>
+<rect x="295.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="870.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="882" font-size="17" text-anchor="end" fill="#444">F</text>
+<text x="1524" y="882" font-size="17" fill="#444">F</text>
+<rect x="295.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="902.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="914" font-size="17" text-anchor="end" fill="#444">G</text>
+<text x="1524" y="914" font-size="17" fill="#444">G</text>
+<rect x="295.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="934.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="946" font-size="17" text-anchor="end" fill="#444">H</text>
+<text x="1524" y="946" font-size="17" fill="#444">H</text>
+<rect x="295.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="966.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="978" font-size="17" text-anchor="end" fill="#444">I</text>
+<text x="1524" y="978" font-size="17" fill="#444">I</text>
+<rect x="295.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="327.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="359.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="391.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="423.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="455.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="487.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="519.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="551.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="583.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="615.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="647.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="679.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="711.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="743.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="775.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="807.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="839.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="871.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="903.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="935.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="967.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="999.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1031.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1063.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1095.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1127.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1159.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1191.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1223.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1255.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1287.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1319.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1351.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1383.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1415.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<rect x="1447.0" y="998.6" width="10" height="10" rx="1.5" fill="#3a3a3a"/>
+<text x="200" y="1010" font-size="17" text-anchor="end" fill="#444">J</text>
+<text x="1524" y="1010" font-size="17" fill="#444">J</text>
+<rect x="289" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="300" y="626" font-size="15" text-anchor="middle" fill="#444">0</text>
+<rect x="289" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="300" y="1030" font-size="15" text-anchor="middle" fill="#444">0</text>
+<rect x="449" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="626" font-size="15" text-anchor="middle" fill="#444">5</text>
+<rect x="449" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="1030" font-size="15" text-anchor="middle" fill="#444">5</text>
+<rect x="609" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="620" y="626" font-size="15" text-anchor="middle" fill="#444">10</text>
+<rect x="609" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="620" y="1030" font-size="15" text-anchor="middle" fill="#444">10</text>
+<rect x="769" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="780" y="626" font-size="15" text-anchor="middle" fill="#444">15</text>
+<rect x="769" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="780" y="1030" font-size="15" text-anchor="middle" fill="#444">15</text>
+<rect x="929" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="626" font-size="15" text-anchor="middle" fill="#444">20</text>
+<rect x="929" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="1030" font-size="15" text-anchor="middle" fill="#444">20</text>
+<rect x="1089" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1100" y="626" font-size="15" text-anchor="middle" fill="#444">25</text>
+<rect x="1089" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1100" y="1030" font-size="15" text-anchor="middle" fill="#444">25</text>
+<rect x="1249" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1260" y="626" font-size="15" text-anchor="middle" fill="#444">30</text>
+<rect x="1409" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1420" y="626" font-size="15" text-anchor="middle" fill="#444">35</text>
+<rect x="1409" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1420" y="1030" font-size="15" text-anchor="middle" fill="#444">35</text>
+<rect x="414" y="752" width="125" height="238" rx="5" fill="#3b3b3b"/>
+<circle cx="428" cy="871" r="8" fill="#606060"/>
+<line x1="428" y1="770" x2="428" y2="752" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="428" y1="990" x2="428" y2="972" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="410" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="428" y="756" font-size="11" font-weight="700" text-anchor="middle" fill="#111">GND</text>
+<rect x="410" y="945" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="428" y="958" font-size="11" font-weight="700" text-anchor="middle" fill="#111">GND</text>
+<line x1="460" y1="770" x2="460" y2="752" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="460" y1="990" x2="460" y2="972" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="442" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="756" font-size="11" font-weight="700" text-anchor="middle" fill="#111">OUT</text>
+<rect x="442" y="945" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="958" font-size="11" font-weight="700" text-anchor="middle" fill="#111">IN+</text>
+<line x1="492" y1="770" x2="492" y2="752" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="492" y1="990" x2="492" y2="972" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="474" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="492" y="756" font-size="11" font-weight="700" text-anchor="middle" fill="#111">REF</text>
+<rect x="474" y="945" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="492" y="958" font-size="11" font-weight="700" text-anchor="middle" fill="#111">IN−</text>
+<line x1="524" y1="770" x2="524" y2="752" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="524" y1="990" x2="524" y2="972" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="506" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="524" y="756" font-size="11" font-weight="700" text-anchor="middle" fill="#111">−VS</text>
+<rect x="506" y="945" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="524" y="958" font-size="11" font-weight="700" text-anchor="middle" fill="#111">+VS</text>
+<text x="479" y="863" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">AD623 모듈</text>
+<text x="479" y="880" font-size="11" text-anchor="middle" fill="#d8d8d0">이득은 보드 위 트리머로</text>
+<text x="479" y="895" font-size="11" text-anchor="middle" fill="#d8d8d0">핀 이름은 위아래에</text>
+<rect x="894" y="790" width="125" height="66" rx="5" fill="#3b3b3b"/>
+<circle cx="908" cy="823" r="8" fill="#606060"/>
+<line x1="908" y1="770" x2="908" y2="790" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="908" y1="856" x2="908" y2="876" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="890" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="908" y="756" font-size="14" font-weight="700" text-anchor="middle" fill="#111">8</text>
+<rect x="890" y="889" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="908" y="902" font-size="14" font-weight="700" text-anchor="middle" fill="#111">1</text>
+<line x1="940" y1="770" x2="940" y2="790" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="940" y1="856" x2="940" y2="876" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="922" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="756" font-size="14" font-weight="700" text-anchor="middle" fill="#111">7</text>
+<rect x="922" y="889" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="902" font-size="14" font-weight="700" text-anchor="middle" fill="#111">2</text>
+<line x1="972" y1="770" x2="972" y2="790" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="972" y1="856" x2="972" y2="876" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="954" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="972" y="756" font-size="14" font-weight="700" text-anchor="middle" fill="#111">6</text>
+<rect x="954" y="889" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="972" y="902" font-size="14" font-weight="700" text-anchor="middle" fill="#111">3</text>
+<line x1="1004" y1="770" x2="1004" y2="790" stroke="#9a9a9a" stroke-width="5"/>
+<line x1="1004" y1="856" x2="1004" y2="876" stroke="#9a9a9a" stroke-width="5"/>
+<rect x="986" y="743" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1004" y="756" font-size="14" font-weight="700" text-anchor="middle" fill="#111">5</text>
+<rect x="986" y="889" width="36" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1004" y="902" font-size="14" font-weight="700" text-anchor="middle" fill="#111">4</text>
+<text x="959" y="815" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">TL072</text>
+<text x="959" y="832" font-size="11" text-anchor="middle" fill="#d8d8d0">아래 — 2단 (대역통과 + 이득)</text>
+<text x="959" y="847" font-size="11" text-anchor="middle" fill="#d8d8d0">위 — 남는 반쪽 · 묶어 둔다</text>
+<path d="M 364 550 L 364 1068" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="364" cy="550" r="6" fill="#1a5fb4"/><circle cx="364" cy="1068" r="6" fill="#1a5fb4"/>
+<path d="M 428 674 L 428 550" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="428" cy="674" r="6" fill="#1a5fb4"/><circle cx="428" cy="550" r="6" fill="#1a5fb4"/>
+<path d="M 428 1004 L 428 1068" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="428" cy="1004" r="6" fill="#1a5fb4"/><circle cx="428" cy="1068" r="6" fill="#1a5fb4"/>
+<path d="M 492 674 L 492 550" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="492" cy="674" r="6" fill="#1a5fb4"/><circle cx="492" cy="550" r="6" fill="#1a5fb4"/>
+<path d="M 524 706 L 396 706" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="524" cy="706" r="6" fill="#1a5fb4"/><circle cx="396" cy="706" r="6" fill="#1a5fb4"/>
+<path d="M 396 674 L 396 1108" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="396" cy="674" r="6" fill="#1a5fb4"/><circle cx="396" cy="1108" r="6" fill="#1a5fb4"/>
+<path d="M 524 1004 L 556 1004" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="524" cy="1004" r="6" fill="#1a5fb4"/><circle cx="556" cy="1004" r="6" fill="#1a5fb4"/>
+<path d="M 556 972 L 556 706" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="556" cy="972" r="6" fill="#1a5fb4"/><circle cx="556" cy="706" r="6" fill="#1a5fb4"/>
+<path d="M 556 674 L 556 510" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="556" cy="674" r="6" fill="#1a5fb4"/><circle cx="556" cy="510" r="6" fill="#1a5fb4"/>
+<path d="M 460 674 L 620 674" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="460" cy="674" r="6" fill="#1a5fb4"/><circle cx="620" cy="674" r="6" fill="#1a5fb4"/>
+<path d="M 620 706 L 620 1004" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="620" cy="706" r="6" fill="#1a5fb4"/><circle cx="620" cy="1004" r="6" fill="#1a5fb4"/>
+<path d="M 460 1004 L 588 1004" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="460" cy="1004" r="6" fill="#1a5fb4"/><circle cx="588" cy="1004" r="6" fill="#1a5fb4"/>
+<path d="M 684 1004 L 716 1068" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="684" cy="1004" r="6" fill="#1a5fb4"/><circle cx="716" cy="1068" r="6" fill="#1a5fb4"/>
+<path d="M 908 674 L 908 510" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="908" cy="674" r="6" fill="#1a5fb4"/><circle cx="908" cy="510" r="6" fill="#1a5fb4"/>
+<path d="M 1004 972 L 1004 1108" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="1004" cy="972" r="6" fill="#1a5fb4"/><circle cx="1004" cy="1108" r="6" fill="#1a5fb4"/>
+<path d="M 972 908 L 972 1068" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="972" cy="908" r="6" fill="#1a5fb4"/><circle cx="972" cy="1068" r="6" fill="#1a5fb4"/>
+<path d="M 908 1004 L 1068 1004" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="908" cy="1004" r="6" fill="#1a5fb4"/><circle cx="1068" cy="1004" r="6" fill="#1a5fb4"/>
+<path d="M 1068 876 L 1388 876" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="1068" cy="876" r="6" fill="#1a5fb4"/><circle cx="1388" cy="876" r="6" fill="#1a5fb4"/>
+<path d="M 1260 908 L 1196 1068" stroke="#1a5fb4" stroke-width="6.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="1260" cy="908" r="6" fill="#1a5fb4"/><circle cx="1196" cy="1068" r="6" fill="#1a5fb4"/>
+<line x1="940" y1="738" x2="972" y2="738" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(956,738) rotate(0.0)"><rect x="-15" y="-12" width="30" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-10.2" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-5.7" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.2" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="3.3" y="-11" width="2.4" height="22" fill="#b8b8b8" stroke="#5a5a5a" stroke-width="0.4"/><rect x="7.8" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="792" y="716" width="135" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="921" y="732" font-size="17" font-weight="700" text-anchor="end" fill="#111">1 Ω</text>
+<text x="921" y="749" font-size="15" font-weight="700" text-anchor="end" fill="#a33">남는 반쪽 되먹임</text>
+<line x1="1004" y1="642" x2="1004" y2="550" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1004,596) rotate(-90.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#c0392b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="1020" y="574" width="204" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1026" y="590" font-size="17" font-weight="700" text-anchor="start" fill="#111">10 kΩ</text>
+<text x="1026" y="607" font-size="15" font-weight="700" text-anchor="start" fill="#a33">남는 반쪽 +입력을 GND 로</text>
+<line x1="588" y1="908" x2="684" y2="908" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(636,908) rotate(0.0)"><rect x="-15" y="-12" width="30" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-10.2" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-5.7" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.2" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="3.3" y="-11" width="2.4" height="22" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/><rect x="7.8" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="612" y="862" width="48" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="636" y="878" font-size="17" font-weight="700" text-anchor="middle" fill="#111">Rb1</text>
+<text x="636" y="895" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">1 MΩ</text>
+<line x1="492" y1="1004" x2="492" y2="1068" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(492,1036) rotate(90.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="508" y="1020" width="48" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="514" y="1036" font-size="17" font-weight="700" text-anchor="start" fill="#111">Rb2</text>
+<text x="514" y="1053" font-size="15" font-weight="700" text-anchor="start" fill="#a33">1 MΩ</text>
+<line x1="620" y1="972" x2="716" y2="972" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(668,972) rotate(0.0)"><rect x="-16" y="-12" width="32" height="24" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/></g>
+<rect x="648" y="926" width="39" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="668" y="942" font-size="17" font-weight="700" text-anchor="middle" fill="#111">C1</text>
+<text x="668" y="959" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">474</text>
+<line x1="716" y1="940" x2="940" y2="940" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(828,940) rotate(0.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="795" y="894" width="66" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="828" y="910" font-size="17" font-weight="700" text-anchor="middle" fill="#111">Rin</text>
+<text x="828" y="927" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">3.3 kΩ</text>
+<line x1="1068" y1="972" x2="940" y2="972" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1004,972) rotate(180.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#c0392b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="976" y="980" width="57" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1004" y="996" font-size="17" font-weight="700" text-anchor="middle" fill="#111">Rf</text>
+<text x="1004" y="1013" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">10 kΩ</text>
+<line x1="1068" y1="908" x2="940" y2="908" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1004,908) rotate(180.0)"><rect x="-16" y="-12" width="32" height="24" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/></g>
+<rect x="984" y="862" width="39" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1004" y="878" font-size="17" font-weight="700" text-anchor="middle" fill="#111">Cf</text>
+<text x="1004" y="895" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">472</text>
+<line x1="1388" y1="908" x2="1356" y2="908" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1372,908) rotate(180.0)"><rect x="-13" y="-12" width="26" height="24" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/></g>
+<rect x="1408" y="886" width="87" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1414" y="902" font-size="17" font-weight="700" text-anchor="start" fill="#111">10 µF</text>
+<text x="1414" y="919" font-size="15" font-weight="700" text-anchor="start" fill="#a33">전해 50 V</text>
+<line x1="1292" y1="940" x2="1260" y2="940" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1276,940) rotate(180.0)"><rect x="-13" y="-12" width="26" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-8.2" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-4.7" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.2" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="2.3" y="-11" width="2.4" height="22" fill="#b8b8b8" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.8" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="1103" y="918" width="144" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1241" y="934" font-size="17" font-weight="700" text-anchor="end" fill="#111">1 Ω</text>
+<text x="1241" y="951" font-size="15" font-weight="700" text-anchor="end" fill="#a33">RING2 ↔ SLEEVE</text>
+<line x1="1324" y1="972" x2="1292" y2="972" stroke="#9a9a9a" stroke-width="2.5"/>
+<g transform="translate(1308,972) rotate(180.0)"><rect x="-13" y="-12" width="26" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-8.2" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-4.7" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.2" y="-11" width="2.4" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="2.3" y="-11" width="2.4" height="22" fill="#b8b8b8" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.8" y="-11" width="2.4" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="1340" y="950" width="135" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<text x="1346" y="966" font-size="17" font-weight="700" text-anchor="start" fill="#111">1 Ω</text>
+<text x="1346" y="983" font-size="15" font-weight="700" text-anchor="start" fill="#a33">RING1 ↔ RING2</text>
+<line x1="620" y1="510" x2="620" y2="550" stroke="#9a9a9a" stroke-width="2.5"/>
+<rect x="606" y="519" width="28" height="22" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/>
+<rect x="636" y="519" width="44" height="20" rx="3" fill="#fff" opacity="0.92"/>
+<text x="638" y="535" font-size="15" font-weight="700" fill="#a33">104</text>
+<line x1="620" y1="1068" x2="620" y2="1108" stroke="#9a9a9a" stroke-width="2.5"/>
+<rect x="606" y="1077" width="28" height="22" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/>
+<rect x="636" y="1077" width="44" height="20" rx="3" fill="#fff" opacity="0.92"/>
+<text x="638" y="1093" font-size="15" font-weight="700" fill="#a33">104</text>
+<line x1="812" y1="510" x2="812" y2="550" stroke="#9a9a9a" stroke-width="2.5"/>
+<rect x="798" y="519" width="28" height="22" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/>
+<rect x="828" y="519" width="44" height="20" rx="3" fill="#fff" opacity="0.92"/>
+<text x="830" y="535" font-size="15" font-weight="700" fill="#a33">104</text>
+<line x1="812" y1="1068" x2="812" y2="1108" stroke="#9a9a9a" stroke-width="2.5"/>
+<rect x="798" y="1077" width="28" height="22" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/>
+<rect x="828" y="1077" width="44" height="20" rx="3" fill="#fff" opacity="0.92"/>
+<text x="830" y="1093" font-size="15" font-weight="700" fill="#a33">104</text>
+<line x1="216" y1="1150" x2="1510" y2="1150" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="226" y="1172" font-size="15" fill="#666">← 여기까지가 브레드보드. 아래는 책상 위다 →</text>
+<rect x="1506" y="1242" width="150" height="190" rx="6" fill="#8f2b2b" stroke="#5e1616" stroke-width="2"/>
+<text x="1581" y="1416" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">TRRS Breakout</text>
+<rect x="1514" y="1344" width="134" height="52" rx="5" fill="#242424"/>
+<rect x="1480" y="1355" width="34" height="30" rx="6" fill="#2b2b2b"/>
+<circle cx="1492" cy="1370" r="9" fill="#0b0d10" stroke="#8d939c" stroke-width="2"/>
+<text x="1587" y="1375" font-size="12" text-anchor="middle" fill="#bbb">3.5 mm 암</text>
+<circle cx="1532" cy="1258" r="7" fill="#d9b34a" stroke="#7a5f18" stroke-width="2"/>
+<text x="1532" y="1244" font-size="13" font-weight="700" text-anchor="middle" fill="#8f2b2b">S</text>
+<path d="M 1260 1004 L 1260 1190 L 1532 1190 L 1532 1258" stroke="#0f9b8e" stroke-width="4" fill="none" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="1260" cy="1004" r="6" fill="#0f9b8e"/>
+<rect x="1246" y="1015" width="28" height="18" rx="3" fill="#fff" opacity="0.95"/>
+<text x="1260" y="1029" font-size="13" font-weight="700" text-anchor="middle" fill="#0f9b8e">S</text>
+<circle cx="1565" cy="1258" r="7" fill="#d9b34a" stroke="#7a5f18" stroke-width="2"/>
+<text x="1565" y="1244" font-size="13" font-weight="700" text-anchor="middle" fill="#8f2b2b">R2</text>
+<path d="M 1292 1004 L 1292 1201 L 1565 1201 L 1565 1258" stroke="#0f9b8e" stroke-width="4" fill="none" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="1292" cy="1004" r="6" fill="#0f9b8e"/>
+<rect x="1278" y="1015" width="28" height="18" rx="3" fill="#fff" opacity="0.95"/>
+<text x="1292" y="1029" font-size="13" font-weight="700" text-anchor="middle" fill="#0f9b8e">R2</text>
+<circle cx="1598" cy="1258" r="7" fill="#d9b34a" stroke="#7a5f18" stroke-width="2"/>
+<text x="1598" y="1244" font-size="13" font-weight="700" text-anchor="middle" fill="#8f2b2b">R1</text>
+<path d="M 1324 1004 L 1324 1212 L 1598 1212 L 1598 1258" stroke="#0f9b8e" stroke-width="4" fill="none" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="1324" cy="1004" r="6" fill="#0f9b8e"/>
+<rect x="1310" y="1015" width="28" height="18" rx="3" fill="#fff" opacity="0.95"/>
+<text x="1324" y="1029" font-size="13" font-weight="700" text-anchor="middle" fill="#0f9b8e">R1</text>
+<circle cx="1631" cy="1258" r="7" fill="#d9b34a" stroke="#7a5f18" stroke-width="2"/>
+<text x="1631" y="1244" font-size="13" font-weight="700" text-anchor="middle" fill="#8f2b2b">T</text>
+<path d="M 1356 1004 L 1356 1223 L 1631 1223 L 1631 1258" stroke="#0f9b8e" stroke-width="4" fill="none" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="1356" cy="1004" r="6" fill="#0f9b8e"/>
+<rect x="1342" y="1015" width="28" height="18" rx="3" fill="#fff" opacity="0.95"/>
+<text x="1356" y="1029" font-size="13" font-weight="700" text-anchor="middle" fill="#0f9b8e">T</text>
+<path d="M 1454 1370 L 1480 1370" stroke="#2f2f2f" stroke-width="7" stroke-linecap="round"/>
+<rect x="1418" y="1364" width="40" height="12" rx="3" fill="#b9bcc2"/>
+<path d="M 1418 1370 L 396 1370" stroke="#2f2f2f" stroke-width="7" stroke-linecap="round"/>
+<circle cx="396" cy="1370" r="16" fill="#fff" stroke="#2f2f2f" stroke-width="3.5"/>
+<text x="396" y="1376" font-size="16" font-weight="700" text-anchor="middle" fill="#222">⑥</text>
+<text x="422" y="1402" font-size="16" fill="#111">채널 2 오디오 케이블 → 인터페이스 입력 2</text>
+<text x="1674" y="1266" font-size="16" font-weight="700" fill="#c0392b">암–수 점퍼선 4개</text>
+<text x="1674" y="1288" font-size="15" fill="#444">암 쪽 → 모듈의 수핀</text>
+<text x="1674" y="1308" font-size="15" fill="#444">수 쪽 → 보드 J행</text>
+<text x="216" y="1466" font-size="16" fill="#c0392b" font-weight="700">★ 브레이크아웃은 브레드보드에 꽂을 수 없다 — 잭 몸통이 걸려 레일 줄에만 닿는데, 레일 한 줄은 통째로 한 노드라 핀 4개가 전부 단락된다 (2026-09-05 실물 확인).</text>
+<text x="216" y="1490" font-size="16" fill="#c0392b" font-weight="700">★ 그래서 모듈은 보드 옆 책상에 두고 암–수 점퍼선 4개로 잇는다. 암 쪽을 모듈의 수핀에 끼우고 수 쪽을 보드 J행에 꽂는다. 채널마다 4개, 두 채널 8개.</text>
+<text x="216" y="1514" font-size="16" fill="#c0392b" font-weight="700">★ 실물 인쇄를 보고 TIP 이 33열에 가게만 맞추면 된다. 나머지 셋(RING1 · RING2 · SLEEVE)은 어차피 전부 GND 로 묶인다.</text>
+<text x="216" y="1538" font-size="16" fill="#444" font-weight="400">점퍼선이 길면 케이블타이로 묶는다 — 벌어지면 그 사이가 고리가 되어 60 Hz 를 줍는다.</text>
+<circle cx="588" cy="940" r="15" fill="#fff" stroke="#0f9b8e" stroke-width="3.5"/>
+<text x="588" y="946" font-size="16" font-weight="700" text-anchor="middle" fill="#333">②</text>
+<line x1="204" y1="510" x2="300" y2="510" stroke="#1a5fb4" stroke-width="6.5" stroke-linecap="round"/>
+<circle cx="300" cy="510" r="15" fill="#fff" stroke="#1a5fb4" stroke-width="3.5"/>
+<text x="300" y="516" font-size="16" font-weight="700" text-anchor="middle" fill="#333">④</text>
+<line x1="204" y1="550" x2="300" y2="550" stroke="#1a5fb4" stroke-width="6.5" stroke-linecap="round"/>
+<circle cx="300" cy="550" r="15" fill="#fff" stroke="#1a5fb4" stroke-width="3.5"/>
+<text x="300" y="556" font-size="16" font-weight="700" text-anchor="middle" fill="#333">④</text>
+<line x1="204" y1="1108" x2="300" y2="1108" stroke="#1a5fb4" stroke-width="6.5" stroke-linecap="round"/>
+<circle cx="300" cy="1108" r="15" fill="#fff" stroke="#1a5fb4" stroke-width="3.5"/>
+<text x="300" y="1114" font-size="16" font-weight="700" text-anchor="middle" fill="#333">④</text>
+<rect x="289" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="300" y="626" font-size="15" text-anchor="middle" fill="#444">0</text>
+<rect x="289" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="300" y="1030" font-size="15" text-anchor="middle" fill="#444">0</text>
+<rect x="449" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="626" font-size="15" text-anchor="middle" fill="#444">5</text>
+<rect x="449" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="460" y="1030" font-size="15" text-anchor="middle" fill="#444">5</text>
+<rect x="609" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="620" y="626" font-size="15" text-anchor="middle" fill="#444">10</text>
+<rect x="609" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="620" y="1030" font-size="15" text-anchor="middle" fill="#444">10</text>
+<rect x="769" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="780" y="626" font-size="15" text-anchor="middle" fill="#444">15</text>
+<rect x="769" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="780" y="1030" font-size="15" text-anchor="middle" fill="#444">15</text>
+<rect x="929" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="626" font-size="15" text-anchor="middle" fill="#444">20</text>
+<rect x="929" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="940" y="1030" font-size="15" text-anchor="middle" fill="#444">20</text>
+<rect x="1089" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1100" y="626" font-size="15" text-anchor="middle" fill="#444">25</text>
+<rect x="1089" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1100" y="1030" font-size="15" text-anchor="middle" fill="#444">25</text>
+<rect x="1249" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1260" y="626" font-size="15" text-anchor="middle" fill="#444">30</text>
+<rect x="1409" y="613" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1420" y="626" font-size="15" text-anchor="middle" fill="#444">35</text>
+<rect x="1409" y="1017" width="22" height="17" rx="3" fill="#fff" opacity="0.92"/>
+<text x="1420" y="1030" font-size="15" text-anchor="middle" fill="#444">35</text>
+<text x="216" y="1602" font-size="21" font-weight="700" fill="#111">보드 밖으로 나가는 자리</text>
+<circle cx="466" cy="1596" r="14" fill="#fff" stroke="#0f9b8e" stroke-width="3"/>
+<text x="466" y="1602" font-size="15" font-weight="700" text-anchor="middle" fill="#222">②</text>
+<text x="490" y="1602" font-size="16" fill="#333">기록 전극 2 (AD623 IN+)</text>
+<circle cx="1266" cy="1596" r="14" fill="#fff" stroke="#1a5fb4" stroke-width="3"/>
+<text x="1266" y="1602" font-size="15" font-weight="700" text-anchor="middle" fill="#222">④</text>
+<text x="1290" y="1602" font-size="16" fill="#333">레일 V+ ← 1번 보드</text>
+<circle cx="466" cy="1628" r="14" fill="#fff" stroke="#2f2f2f" stroke-width="3"/>
+<text x="466" y="1634" font-size="15" font-weight="700" text-anchor="middle" fill="#222">⑥</text>
+<text x="490" y="1634" font-size="16" fill="#333">채널 2 오디오 케이블 → 인터페이스 입력 2</text>
+<text x="216" y="1696" font-size="24" font-weight="700" fill="#111">무엇을 몇 개 꽂나 — 2번 보드</text>
+<text x="216" y="1730" font-size="18" font-weight="700" fill="#111">이름</text>
+<text x="348" y="1730" font-size="18" font-weight="700" fill="#111">값</text>
+<text x="516" y="1730" font-size="18" font-weight="700" fill="#111">색띠</text>
+<text x="686" y="1730" font-size="18" font-weight="700" fill="#111">개수</text>
+<text x="776" y="1730" font-size="18" font-weight="700" fill="#111">하는 일 · 어디에</text>
+<line x1="216" y1="1740" x2="1510" y2="1740" stroke="#c9c9c2" stroke-width="2"/>
+<text x="216" y="1770" font-size="17" font-weight="700" fill="#111">1 Ω</text>
+<text x="348" y="1770" font-size="17" font-weight="700" fill="#a33">1 Ω</text>
+<rect x="516" y="1755" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1756" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1756" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1756" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1756" width="4.5" height="18" fill="#b8b8b8" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1756" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1770" font-size="14" fill="#555">갈 검 검 은 갈</text>
+<text x="686" y="1770" font-size="17" fill="#111">3개</text>
+<text x="776" y="1770" font-size="16" fill="#444" font-weight="400">남는 반쪽 되먹임 — 20열 D행 · 31열 H행 · 32열 I행</text>
+<text x="216" y="1800" font-size="17" font-weight="700" fill="#111">10 kΩ</text>
+<text x="348" y="1800" font-size="17" font-weight="700" fill="#a33">10 kΩ</text>
+<rect x="516" y="1785" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1786" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1786" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1786" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1786" width="4.5" height="18" fill="#c0392b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1786" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1800" font-size="14" fill="#555">갈 검 검 빨 갈</text>
+<text x="686" y="1800" font-size="17" fill="#111">1개</text>
+<text x="776" y="1800" font-size="16" fill="#444" font-weight="400">남는 반쪽 +입력을 GND 로</text>
+<text x="216" y="1830" font-size="17" font-weight="700" fill="#111">Rb1</text>
+<text x="348" y="1830" font-size="17" font-weight="700" fill="#a33">1 MΩ</text>
+<rect x="516" y="1815" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1816" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1816" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1816" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1816" width="4.5" height="18" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1816" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1830" font-size="14" fill="#555">갈 검 검 노 갈</text>
+<text x="686" y="1830" font-size="17" fill="#111">1개</text>
+<text x="776" y="1830" font-size="16" fill="#c0392b" font-weight="700">★ Rb2 와 같은 값이어야 한다</text>
+<text x="216" y="1860" font-size="17" font-weight="700" fill="#111">Rb2</text>
+<text x="348" y="1860" font-size="17" font-weight="700" fill="#a33">1 MΩ</text>
+<rect x="516" y="1845" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1846" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1846" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1846" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1846" width="4.5" height="18" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1846" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1860" font-size="14" fill="#555">갈 검 검 노 갈</text>
+<text x="686" y="1860" font-size="17" fill="#111">1개</text>
+<text x="776" y="1860" font-size="16" fill="#c0392b" font-weight="700">★ Rb1 과 같은 값이어야 한다</text>
+<text x="216" y="1890" font-size="17" font-weight="700" fill="#111">C1</text>
+<text x="348" y="1890" font-size="17" font-weight="700" fill="#a33">474 마일러 · 0.47 µF</text>
+<text x="686" y="1890" font-size="17" fill="#111">1개</text>
+<text x="776" y="1890" font-size="16" fill="#444" font-weight="400">직류를 끊는다</text>
+<text x="216" y="1920" font-size="17" font-weight="700" fill="#111">Rin</text>
+<text x="348" y="1920" font-size="17" font-weight="700" fill="#a33">3.3 kΩ</text>
+<rect x="516" y="1905" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1906" width="4.5" height="18" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1906" width="4.5" height="18" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1906" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1906" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1906" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1920" font-size="14" fill="#555">주 주 검 갈 갈</text>
+<text x="686" y="1920" font-size="17" fill="#111">1개</text>
+<text x="776" y="1920" font-size="16" fill="#444" font-weight="400">고역차단 103 Hz</text>
+<text x="216" y="1950" font-size="17" font-weight="700" fill="#111">Rf</text>
+<text x="348" y="1950" font-size="17" font-weight="700" fill="#a33">10 kΩ</text>
+<rect x="516" y="1935" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
+<rect x="524" y="1936" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="537" y="1936" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="550" y="1936" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1936" width="4.5" height="18" fill="#c0392b" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="576" y="1936" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
+<text x="600" y="1950" font-size="14" fill="#555">갈 검 검 빨 갈</text>
+<text x="686" y="1950" font-size="17" fill="#111">1개</text>
+<text x="776" y="1950" font-size="16" fill="#444" font-weight="400">2단 이득 3.03</text>
+<text x="216" y="1980" font-size="17" font-weight="700" fill="#111">Cf</text>
+<text x="348" y="1980" font-size="17" font-weight="700" fill="#a33">472 · 4.7 nF</text>
+<text x="686" y="1980" font-size="17" fill="#111">1개</text>
+<text x="776" y="1980" font-size="16" fill="#444" font-weight="400">저역차단 3.39 kHz</text>
+<text x="216" y="2010" font-size="17" font-weight="700" fill="#111">10 µF</text>
+<text x="348" y="2010" font-size="17" font-weight="700" fill="#a33">전해 10 µF · 50 V</text>
+<text x="686" y="2010" font-size="17" fill="#111">1개</text>
+<text x="776" y="2010" font-size="16" fill="#c0392b" font-weight="700">★ + 를 TIP(33열) 쪽으로</text>
+<text x="216" y="2040" font-size="17" font-weight="700" fill="#111">Cd</text>
+<text x="348" y="2040" font-size="17" font-weight="700" fill="#a33">104 · 0.1 µF</text>
+<text x="686" y="2040" font-size="17" fill="#111">4개</text>
+<text x="776" y="2040" font-size="16" fill="#444" font-weight="400">IC 전원핀 가까이 — 10열 · 16열</text>
+<text x="216" y="2070" font-size="17" font-weight="700" fill="#111">IC</text>
+<text x="348" y="2070" font-size="17" font-weight="700" fill="#a33">AD623 모듈 · TL072</text>
+<text x="686" y="2070" font-size="17" fill="#111">2개</text>
+<text x="776" y="2070" font-size="16" fill="#444" font-weight="400">홈에 걸쳐 꽂는다 — 4열 · 19열</text>
+<text x="216" y="2100" font-size="17" font-weight="700" fill="#111">잭 브레이크아웃</text>
+<text x="348" y="2100" font-size="17" font-weight="700" fill="#a33">TRRS · 보드 옆에</text>
+<text x="686" y="2100" font-size="17" fill="#111">1개</text>
+<text x="776" y="2100" font-size="16" fill="#c0392b" font-weight="700">★ 암–수 점퍼선 4개로 30–33열 J행에 · TIP 이 33열</text>
+<text x="216" y="2130" font-size="17" font-weight="700" fill="#111">수–수 점퍼선</text>
+<text x="348" y="2130" font-size="17" font-weight="700" fill="#a33">—</text>
+<text x="686" y="2130" font-size="17" fill="#111">19개</text>
+<text x="776" y="2130" font-size="16" fill="#444" font-weight="400">파란 선 · 위 표에 없는 연결은 전부 점퍼선이다</text>
+<text x="216" y="2178" font-size="16" fill="#c0392b" font-weight="700">★ 1 Ω 은 옆 열끼리(2.54 mm) 잇는다. 몸통이 6.3 mm 라 눕지 않으니 다리를 ㄷ자로 꺾어 세워 꽂는다. 그림은 자리를 보이려고 눕혀 그렸다.</text>
+<text x="216" y="2204" font-size="16" fill="#c0392b" font-weight="700">★ 링 두 개(R1 · R2)를 SLEEVE 에 묶는 것은 3극 케이블을 꽂아도 링이 뜨지 않게 하려는 것이다. 1 Ω 은 점퍼선 대신이고 전기적으로 같다.</text>
+</svg>
