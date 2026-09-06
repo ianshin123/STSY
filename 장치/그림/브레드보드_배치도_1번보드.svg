@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1976" height="2364" viewBox="0 0 1976 2364" font-family="Noto Sans CJK KR, sans-serif"><rect width="1976" height="2364" fill="#fff"/>
 <text x="216" y="72" font-size="31" font-weight="700" fill="#111">브레드보드 배치도 — 1번 보드 · 채널 1   [AD623 판]   전원부가 여기 있다</text>
 <text x="216" y="106" font-size="17" fill="#c0392b" font-weight="700">★ 저항마다 이름 아래 붉은 글씨가 실제로 꽂는 값이다. 몸통의 색띠도 그 값의 띠다. 그래도 꽂기 전에 멀티미터로 잰다.</text>
-<text x="216" y="133" font-size="17" fill="#c0392b" font-weight="700">★ Rb1 과 Rb2 는 반드시 같은 1 MΩ 이다 — AD623 바이어스 전류 17 nA 가 1 MΩ 을 지나면 17 mV 다. 한쪽만 달면 그것이 통째로 직류 오프셋이 되어 증폭된다.</text>
+<text x="216" y="133" font-size="17" fill="#c0392b" font-weight="700">★ Rb1 과 Rb2 는 값이 다르다 — Rb1 은 1 MΩ(전극과 병렬이라 크게), Rb2 는 100 kΩ(병렬이 되는 것이 없어 자기 열잡음이 그대로 실린다). 2026-09-06 에 Rb2 를 1 MΩ 에서 내렸다.</text>
 <text x="216" y="160" font-size="17" fill="#c0392b" font-weight="700">★ 이득 저항 Rg 를 꽂지 않는다 — 모듈 위의 트리머로 맞춘다. 이득을 100 이하로 둔다 (그 위로 가면 대역폭이 3 kHz 아래로 떨어진다).</text>
 <text x="216" y="187" font-size="17" fill="#c0392b" font-weight="700">★ 차동단 저항 네 개가 없어졌다 — CMRR 이 칩 안에서 공장 트리밍돼 있다. 10 kΩ 40개를 재서 고르는 일이 필요 없다.</text>
 <text x="216" y="214" font-size="17" fill="#c0392b" font-weight="700">★ 잭 브레이크아웃은 보드에 직접 못 꽂는다 (레일에만 걸린다) — 암–수 점퍼선 4개로 30–33열 J행까지 뺀다. TIP 이 33열이다.</text>
@@ -695,10 +695,10 @@
 <text x="636" y="878" font-size="17" font-weight="700" text-anchor="middle" fill="#111">Rb1</text>
 <text x="636" y="895" font-size="15" font-weight="700" text-anchor="middle" fill="#a33">1 MΩ</text>
 <line x1="492" y1="1004" x2="492" y2="1068" stroke="#9a9a9a" stroke-width="2.5"/>
-<g transform="translate(492,1036) rotate(90.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
-<rect x="508" y="1020" width="48" height="38" rx="4" fill="#fff" opacity="0.92"/>
+<g transform="translate(492,1036) rotate(90.0)"><rect x="-19" y="-12" width="38" height="24" rx="4" fill="#e3cba2" stroke="#8a7a60" stroke-width="1.5"/><rect x="-14.4" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-7.9" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="-1.4" y="-11" width="2.8" height="22" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/><rect x="5.1" y="-11" width="2.8" height="22" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/><rect x="11.6" y="-11" width="2.8" height="22" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/></g>
+<rect x="508" y="1020" width="66" height="38" rx="4" fill="#fff" opacity="0.92"/>
 <text x="514" y="1036" font-size="17" font-weight="700" text-anchor="start" fill="#111">Rb2</text>
-<text x="514" y="1053" font-size="15" font-weight="700" text-anchor="start" fill="#a33">1 MΩ</text>
+<text x="514" y="1053" font-size="15" font-weight="700" text-anchor="start" fill="#a33">100 kΩ</text>
 <line x1="620" y1="972" x2="716" y2="972" stroke="#9a9a9a" stroke-width="2.5"/>
 <g transform="translate(668,972) rotate(0.0)"><rect x="-16" y="-12" width="32" height="24" rx="4" fill="#93b7dd" stroke="#8a7a60" stroke-width="1.5"/></g>
 <rect x="648" y="926" width="39" height="38" rx="4" fill="#fff" opacity="0.92"/>
@@ -922,18 +922,18 @@
 <rect x="576" y="1910" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
 <text x="600" y="1924" font-size="14" fill="#555">갈 검 검 노 갈</text>
 <text x="686" y="1924" font-size="17" fill="#111">1개</text>
-<text x="776" y="1924" font-size="16" fill="#c0392b" font-weight="700">★ Rb2 와 같은 값이어야 한다</text>
+<text x="776" y="1924" font-size="16" fill="#444" font-weight="400">전극과 병렬 — 크게 둔다</text>
 <text x="216" y="1954" font-size="17" font-weight="700" fill="#111">Rb2</text>
-<text x="348" y="1954" font-size="17" font-weight="700" fill="#a33">1 MΩ</text>
+<text x="348" y="1954" font-size="17" font-weight="700" fill="#a33">100 kΩ</text>
 <rect x="516" y="1939" width="76" height="20" rx="3" fill="#e3cba2" stroke="#8a7a60" stroke-width="1"/>
 <rect x="524" y="1940" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
 <rect x="537" y="1940" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
 <rect x="550" y="1940" width="4.5" height="18" fill="#1b1b1b" stroke="#5a5a5a" stroke-width="0.4"/>
-<rect x="563" y="1940" width="4.5" height="18" fill="#e8c31a" stroke="#5a5a5a" stroke-width="0.4"/>
+<rect x="563" y="1940" width="4.5" height="18" fill="#e67e22" stroke="#5a5a5a" stroke-width="0.4"/>
 <rect x="576" y="1940" width="4.5" height="18" fill="#7a4a1e" stroke="#5a5a5a" stroke-width="0.4"/>
-<text x="600" y="1954" font-size="14" fill="#555">갈 검 검 노 갈</text>
+<text x="600" y="1954" font-size="14" fill="#555">갈 검 검 주 갈</text>
 <text x="686" y="1954" font-size="17" fill="#111">1개</text>
-<text x="776" y="1954" font-size="16" fill="#c0392b" font-weight="700">★ Rb1 과 같은 값이어야 한다</text>
+<text x="776" y="1954" font-size="16" fill="#c0392b" font-weight="700">★ Rb1 과 값이 다르다</text>
 <text x="216" y="1984" font-size="17" font-weight="700" fill="#111">C1</text>
 <text x="348" y="1984" font-size="17" font-weight="700" fill="#a33">474 마일러 · 0.47 µF</text>
 <text x="686" y="1984" font-size="17" fill="#111">1개</text>
